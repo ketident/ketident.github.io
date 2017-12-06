@@ -21,8 +21,7 @@
 		#social .socialbuttons { margin: 10px 50px 40px 40px;float:right; min-width: 200px; max-width:400px; }
 		#slogan { text-align: center; }
 		#content { background-color: #f2f2f2; padding-bottom: 70px;}
-		#slogan h1 {     font-size: 70px; font-weight: 700; line-height: 96px; letter-spacing: 2px; color:white; text-decoration: underline;}
-		@media only screen and (max-width: 769px){ #slogan h1 {font-size:34.2px;line-height:24.7px;}}
+		#slogan h1 { font-size: 70px; font-weight: 700; line-height: 96px; letter-spacing: 2px; color:white; text-decoration: underline;}	
 		#slogan a { display:inline-block; background-color: #c01b1b; text-decoration:none; color:white; padding:10px; margin-bottom:300px; }
 		#services { width:50%; margin: 0 auto; min-width:300px;}
 		#services h2 { padding: 60px 30px 30px 30px; color: #d61e1e; font-size:34px; font-weight: 700; text-align:center;}
@@ -41,11 +40,14 @@
 		#map_border { padding:10px; background:white; width:50%; margin:0 auto; position:relative; top:-40px; min-width:240px;}
 		#map_canvas { height:225px; }
 		.left50 { float: left; width:50%; }
+		.right50 { float: right; width:50%; }
 		.left { float: left; }
 		.right { float: right; }
 		.clear { clear:both; }
 		.socialbuttons { width:103px; height:18px; background-image: url("images/social.png"); background-repeat: no-repeat;}
 		.socialbuttons a { display:inline-block; width:33px; height:18px; float:left;}
+		
+		@media only screen and (max-width: 769px){ #slogan h1 { font-size: 28px; line-height: 38.4px;} #logo{ margin:0 auto;} #header .left50 { float: none; width:100%; } #logo img { margin: 0 auto; display: block; padding:15px; zoom:0.8; } #social .socialbuttons { margin: 10px 40px 40px 40px; } }
 	</style>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
 	<script type="text/javascript">
