@@ -45,14 +45,17 @@
 		#content { background-color: #f2f2f2; padding-bottom: 70px;}
 		#slogan h1 { font-size: 70px; font-weight: 700; line-height: 96px; letter-spacing: 2px; color:white; text-decoration: underline;}	
 		#slogan a { display:inline-block; background-color: #c01b1b; text-decoration:none; color:white; padding:10px; margin-bottom:300px; }
-		#services { width:50%; margin: 0 auto; min-width:300px;}
+
 		#services h2 { padding: 60px 30px 30px 30px; color: #d61e1e; font-size:34px; font-weight: 700; text-align:center; margin: 0; }
 		#services ul { list-style: square; margin:0px; padding:0px; margin-left: 20px; }
 		#services li { color: #a3a3a3; padding:5px; }
 
 		#services .clear { margin-bottom: 100px; }
 		#serviceList { width:200px; margin:0 auto; }
-		#clinicPhoto { min-width: 300px; overflow:hidden; }
+
+		#services { max-width: 1024px; margin: 0 auto;  }
+		#serviceContainer { min-width: 270px; float: left; width: 50%; }
+		#clinicPhoto { min-width: 270px; overflow:hidden; float: left; width: 50%; }
 		#footer { background-color: #2b2f3a; text-align: center;} 
 		#footer img { padding:20px;}
 		#footer .socialbuttons { margin:0 auto; margin-top:40px; padding-bottom:40px;}
@@ -61,11 +64,6 @@
 		#copyright h3 { font-size: 30px; font-weight: 700; line-height: 42px;letter-spacing: inherit;  }
 		#map_border { padding:10px; background:white; width:50%; margin:0 auto; position:relative; top:-40px; min-width:240px;}
 		#map_canvas { height:225px; }
-		.left50 { float: left; width:50%; }
-		.right50 { float: right; width:50%; }
-		.left { float: left; }
-		.right { float: right; }
-		.clear { clear:both; }
 		.socialbuttons { width:103px; height:18px; background-image: url("../images/social.PNG"); background-repeat: no-repeat;}
 		.socialbuttons a { display:inline-block; width:33px; height:18px; float:left;}
 		
@@ -76,6 +74,8 @@
 		.slider-wrapper { height: 550px; overflow: hidden; }
 		.slide { float: left; position: absolute; width: 100%; max-width: 500px; opacity: 0; transition: opacity 1s linear; }
 		.slider-wrapper > .slide:first-child { opacity: 1; }
+
+		.clear { clear: both;  }
 	</style>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -163,8 +163,7 @@
 		 
 		    google.maps.event.addListener(marker, 'click', function() {
 		      infowindow.open(map,marker);
-		    });
-	 
+		    }); 
 	  	}	
 	</script>
   </head>
@@ -194,7 +193,7 @@
 	  <div id="content">
 		  <div id="services">
 		  	<h2>Servizi</h2>
-			<div id="serviceContainer" class="left">
+			<div id="serviceContainer">
 				<div id="serviceList">				
 					<ul>
 						<li>Estetica Dentale</li>
@@ -211,7 +210,7 @@
 					<ul>
 				</div>
 			</div>
-			<div id="clinicPhoto" class="right">
+			<div id="clinicPhoto">
 				<div class="slider" id="main-slider">
 					<div class="slider-wrapper">
 						<img src="../images/1.jpg" class="slide" />
