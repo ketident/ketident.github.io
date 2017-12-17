@@ -49,7 +49,7 @@
 		#services h2 { padding: 60px 30px 30px 30px; color: #d61e1e; font-size:34px; font-weight: 700; text-align:center; margin: 0; }
 		#services ul { list-style: square; margin:0px; padding:0px; margin-left: 20px; }
 		#services li { color: #a3a3a3; padding:5px; }
-		#services img { max-width:100%; display: block; padding-top: 10px;}
+
 		#services .clear { margin-bottom: 100px; }
 		#serviceList { width:200px; margin:0 auto; }
 		#clinicPhoto { min-width: 300px; overflow:hidden; }
@@ -70,36 +70,100 @@
 		.socialbuttons a { display:inline-block; width:33px; height:18px; float:left;}
 		
 		@media only screen and (max-width: 769px){ #bg { background-position: center 0%; background-attachment: scroll !important; min-height: 200px; max-height: 400px; } #slogan h1 { font-size: 28px; line-height: 38.4px;} #logo{ margin:0 auto;} #header .left50 { float: none; width:100%; } #logo img { margin: 0 auto; display: block; padding:30px 15px 15px 15px; zoom:0.7; } #social .socialbuttons { margin: 0 auto; width: 99px; float:none; min-width: auto; max-width:auto; } }
+
+		.slider {  }
+		.slider-wrapper { height: 550px; overflow: hidden; }
+		.slide { float: left; position: absolute; width: 100%; max-width: 500px; opacity: 0; transition: opacity 1s linear; }
+		.slider-wrapper > .slide:first-child { opacity: 1; }
 	</style>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
 	<script type="text/javascript">
-	  function initialize() {
-	    var position = new google.maps.LatLng(41.330951, 19.828522);
-	    var myOptions = {
-	      zoom: 17,
-	      center: position,
-	      mapTypeId: google.maps.MapTypeId.ROADMAP
-	    };
-	    var map = new google.maps.Map(
-	        document.getElementById("map_canvas"),
-	        myOptions);
-	 
-	    var marker = new google.maps.Marker({
-	        position: position,
-	        map: map,
-	        title:"KETIDENT"
-	    });  
-	 
-	    var contentString = 'Klinika Dentare KETIDENT';
-	    var infowindow = new google.maps.InfoWindow({
-	        content: contentString
-	    });
-	 
-	    google.maps.event.addListener(marker, 'click', function() {
-	      infowindow.open(map,marker);
-	    });
-	 
-	  }
+	  	function Slideshow( element ) {
+			this.el = document.querySelector( element );
+			this.init();
+		}
+		
+		Slideshow.prototype = {
+			init: function() {
+				this.wrapper = this.el.querySelector( ".slider-wrapper" );
+				this.slides = this.el.querySelectorAll( ".slide" );
+				this.previous = this.el.querySelector( ".slider-previous" );
+				this.next = this.el.querySelector( ".slider-next" );
+				this.index = 0;
+				this.total = this.slides.length;
+				this.timer = null;
+				
+				this.action();
+				this.stopStart();	
+			},
+			_slideTo: function( slide ) {
+				var currentSlide = this.slides[slide];
+				currentSlide.style.opacity = 1;
+				
+				for( var i = 0; i < this.slides.length; i++ ) {
+					var slide = this.slides[i];
+					if( slide !== currentSlide ) {
+						slide.style.opacity = 0;
+					}
+				}
+			},
+			action: function() {
+				var self = this;
+				self.timer = setInterval(function() {
+					self.index++;
+					if( self.index == self.slides.length ) {
+						self.index = 0;
+					}
+					self._slideTo( self.index );
+					
+				}, 3000);
+			},
+			stopStart: function() {
+				var self = this;
+				self.el.addEventListener( "mouseover", function() {
+					clearInterval( self.timer );
+					self.timer = null;
+					
+				}, false);
+				self.el.addEventListener( "mouseout", function() {
+					self.action();
+					
+				}, false);
+			}
+			
+			
+		};
+		
+		document.addEventListener( "DOMContentLoaded", function() {		
+			var slider = new Slideshow( "#main-slider" );		
+		});
+	
+    	function initialize() {
+		    var position = new google.maps.LatLng(41.330951, 19.828522);
+		    var myOptions = {
+		      zoom: 17,
+		      center: position,
+		      mapTypeId: google.maps.MapTypeId.ROADMAP
+		    };
+		    var map = new google.maps.Map(
+		        document.getElementById("map_canvas"),
+		        myOptions);
+		 
+		    var marker = new google.maps.Marker({
+		        position: position,
+		        map: map,
+		        title:"KETIDENT"
+		    });  
+		 
+		    var contentString = 'Klinika Dentare KETIDENT';
+		    var infowindow = new google.maps.InfoWindow({
+		        content: contentString
+		    });
+		 
+		    google.maps.event.addListener(marker, 'click', function() {
+		      infowindow.open(map,marker);
+		    }); 
+	  	}
 	</script>
   </head>
   <body onload="initialize()">
@@ -146,7 +210,30 @@
 				</div>
 			</div>
 			<div id="clinicPhoto" class="right">
-				<img src="images/klinika2.jpg"/>
+				<div class="slider" id="main-slider">
+					<div class="slider-wrapper">
+						<img src="images/1.jpg" class="slide" />
+						<img src="images/2.jpg" class="slide" />
+						<img src="images/3.jpg" class="slide" />
+						<img src="images/4.jpg" class="slide" />
+						<img src="images/5.jpg" class="slide" />
+						<img src="images/6.jpg" class="slide" />
+						<img src="images/7.jpg" class="slide" />
+						<img src="images/8.jpg" class="slide" />
+						<img src="images/9.jpg" class="slide" />
+						<img src="images/10.jpg" class="slide" />
+						<img src="images/11.jpg" class="slide" />
+						<img src="images/12.jpg" class="slide" />
+						<img src="images/13.jpg" class="slide" />
+						<img src="images/14.jpg" class="slide" />
+						<img src="images/15.jpg" class="slide" />
+						<img src="images/16.jpg" class="slide" />
+						<img src="images/17.jpg" class="slide" />
+						<img src="images/18.jpg" class="slide" />
+						<img src="images/19.jpg" class="slide" />
+						<img src="images/20.jpg" class="slide" />
+					</div>
+				</div>	
 			</div>
 			<div class="clear"></div>
 		  </div>
