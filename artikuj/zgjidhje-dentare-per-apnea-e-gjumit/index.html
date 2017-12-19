@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110808708-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-110808708-1');
+	</script>
+
+    <meta charset="UTF-8">
+    <title>Klinika Dentare KETIDENT</title>
+	<meta name="keywords" content="klinike,dentist,klinike dentare,implante,zbardhim,zirkon,porcelan,ura,heqje,mbushje,gureza" />
+	<meta name="description" content="Klinika dentare KetiDent ofron mbushje Estetike, FASETA, Zbardhim, Fluorizim, Piercing, Pastrim gurezash, Ura porcelan, Ura ZIRKON, Proteza, IMPLANTE dhe Drejtim Dhembesh" />
+
+	<meta property="og:url" content="http://ketident.com/">
+	<meta property="og:title" content="Kreu">
+	<meta property="og:description" content="Klinika dentare KetiDent ofron mbushje Estetike, FASETA, Zbardhim, Fluorizim, Piercing, Pastrim gurezash, Ura porcelan, Ura ZIRKON, Proteza, IMPLANTE dhe Drejtim Dhembesh">
+	<meta property="og:site_name" content="Klinika Dentare KetiDent">
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<style>
+		body { margin: 0px; padding: 0px;  font-family: "Poppins", "Montserrat", "Trebuchet MS", Helvetica, sans-serif; }
+		#bg {
+			background-image: url("../../images/artikuj/zgjidhje-dentare-per-apnea-e-gjumit.jpg");
+			background-repeat:no-repeat; 
+			background-attachment:fixed;
+			background-position:center center;
+			-webkit-background-size:cover;
+			-moz-background-size:cover;
+			-o-background-size:cover;
+			background-size:cover;
+			display:table;
+			height:800px;
+			width:100%;
+		}
+		#logo img { margin: 40px; }
+		#social .socialbuttons { margin: 10px 50px 40px 40px;float:right; min-width: 200px; max-width:400px; }
+		#slogan { text-align: center; }
+		#content { background-color: #f2f2f2; padding-bottom: 70px;}
+		#content p { margin:0 }
+		#contentWrapper { min-width: 270px; max-width: 1024px; margin:0 auto; }
+		#contentWrapper h1 { margin: 0; text-align: center; padding: 20px; }
+		#slogan h1 { font-size: 70px; font-weight: 700; line-height: 96px; letter-spacing: 2px; color:white; text-decoration: underline;}	
+		#slogan a { display:inline-block; background-color: #c01b1b; text-decoration:none; color:white; padding:10px; margin-bottom:300px; }
+
+		#services h2 { padding: 60px 30px 30px 30px; color: #d61e1e; font-size:34px; font-weight: 700; text-align:center; margin: 0; }
+		#services ul { list-style: square; margin:0px; padding:0px; margin-left: 20px; }
+		#services li { color: #a3a3a3; padding:5px; }
+
+		#services .clear { margin-bottom: 100px; }
+		#serviceList { width:200px; margin:0 auto; }
+
+		#services { max-width: 1024px; margin: 0 auto;  }
+		#serviceContainer { min-width: 270px; float: left; width: 50%; }
+		#clinicPhoto { min-width: 270px; overflow:hidden; float: left; width: 50%; }
+		#footer { background-color: #2b2f3a; text-align: center;} 
+		#footer img { padding:20px;}
+		#footer .socialbuttons { margin:0 auto; margin-top:40px; padding-bottom:40px;}
+		#copyright { background: #414757; color: #a3a3a3;} 
+		#copyright p { padding-bottom:50px;}
+		#copyright h3 { font-size: 30px; font-weight: 700; line-height: 42px;letter-spacing: inherit;  }
+		#map_border { padding:10px; background:white; width:50%; margin:0 auto; position:relative; top:-40px; min-width:240px;}
+		#map_canvas { height:225px; }
+		.clear { clear:both; }
+		.socialbuttons { width:103px; height:18px; background-image: url("../../images/social.PNG"); background-repeat: no-repeat;}
+		.socialbuttons a { display:inline-block; width:33px; height:18px; float:left;}
+		
+		@media only screen and (max-width: 769px){ #bg { background-position: center 0%; background-attachment: scroll !important; min-height: 200px; max-height: 400px; } #slogan h1 { font-size: 28px; line-height: 38.4px;} #logo{ margin:0 auto;} #header .left50 { float: none; width:100%; } #logo img { margin: 0 auto; display: block; padding:30px 15px 15px 15px; zoom:0.7; } #social .socialbuttons { margin: 0 auto; width: 99px; float:none; min-width: auto; max-width:auto; } }
+
+		.slider {  }
+		.slider-wrapper { height: 550px; overflow: hidden; }
+		.slide { float: left; position: absolute; width: 100%; max-width: 500px; opacity: 0; transition: opacity 1s linear; }
+		.slider-wrapper > .slide:first-child { opacity: 1; }
+	</style>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
+	<script type="text/javascript">
+	  	function Slideshow( element ) {
+			this.el = document.querySelector( element );
+			this.init();
+		}
+		
+		Slideshow.prototype = {
+			init: function() {
+				this.wrapper = this.el.querySelector( ".slider-wrapper" );
+				this.slides = this.el.querySelectorAll( ".slide" );
+				this.previous = this.el.querySelector( ".slider-previous" );
+				this.next = this.el.querySelector( ".slider-next" );
+				this.index = 0;
+				this.total = this.slides.length;
+				this.timer = null;
+				
+				this.action();
+				this.stopStart();	
+			},
+			_slideTo: function( slide ) {
+				var currentSlide = this.slides[slide];
+				currentSlide.style.opacity = 1;
+				
+				for( var i = 0; i < this.slides.length; i++ ) {
+					var slide = this.slides[i];
+					if( slide !== currentSlide ) {
+						slide.style.opacity = 0;
+					}
+				}
+			},
+			action: function() {
+				var self = this;
+				self.timer = setInterval(function() {
+					self.index++;
+					if( self.index == self.slides.length ) {
+						self.index = 0;
+					}
+					self._slideTo( self.index );
+					
+				}, 3000);
+			},
+			stopStart: function() {
+				var self = this;
+				self.el.addEventListener( "mouseover", function() {
+					clearInterval( self.timer );
+					self.timer = null;
+					
+				}, false);
+				self.el.addEventListener( "mouseout", function() {
+					self.action();
+					
+				}, false);
+			}
+			
+			
+		};
+		
+		document.addEventListener( "DOMContentLoaded", function() {		
+			var slider = new Slideshow( "#main-slider" );		
+		});
+	
+    	function initialize() {
+		    var position = new google.maps.LatLng(41.330951, 19.828522);
+		    var myOptions = {
+		      zoom: 17,
+		      center: position,
+		      mapTypeId: google.maps.MapTypeId.ROADMAP
+		    };
+		    var map = new google.maps.Map(
+		        document.getElementById("map_canvas"),
+		        myOptions);
+		 
+		    var marker = new google.maps.Marker({
+		        position: position,
+		        map: map,
+		        title:"KETIDENT"
+		    });  
+		 
+		    var contentString = 'Klinika Dentare KETIDENT';
+		    var infowindow = new google.maps.InfoWindow({
+		        content: contentString
+		    });
+		 
+		    google.maps.event.addListener(marker, 'click', function() {
+		      infowindow.open(map,marker);
+		    }); 
+	  	}
+	</script>
+  </head>
+  <body onload="initialize()">
+  <div id="container">
+		<div id="bg">
+		  <a href="http://ketident.com/"><img src="../../images/al.jpg"></img></a>
+		  <a href="http://ketident.com/it/"><img src="../../images/it.jpg"></img></a>
+		  <div id="header">
+			<div id="logo" class="left50">
+				<img src="../../images/logo.jpg"/>
+			</div>
+			<div id="social" class="left50">
+				<div class="socialbuttons">
+					<a href="https://www.facebook.com/klinikadentareketident/"></a>
+					<a href="https://instagram.com/ketident"></a>
+					<a href="https://www.linkedin.com/company-beta/18217103/"></a>
+				</div>
+			</div>
+			<div class="clear"></div>
+		  </div>
+		  <div id="slogan">
+			<h1>Shëndeti fillon nga goja</h1>
+			<a href="tel:00355693919755">0693919755</a>
+		  </div>
+		</div>
+	  <div id="content">
+	  	<div id="contentWrapper">
+	  		<h1>Trauma Dentare</h1>
+<p>
+Apneja e gjumit është një kusht që ndikon deri në 25% të njerëzve në Kanada, por mendimi i parë zakonisht nuk do të jetë për të kërkuar ndihmë nga dentisti; megjithatë, ka shumë mënyra në të cilat ata mund të ndihmojnë. Nëse një pacient po vuan nga një formë e moderuar e Apnea të Gjumit, atëherë veshja me një pajisje kur pacienti të fle mund të jetë një opsion i mundshëm.
+<br/>
+Duke punuar me stomatologët tuaj<br/>
+Nëse po mendoni të provoni një aparat dentar, kontrolloni që dentisti juaj ka përvojë të mëparshme në këtë fushë dhe të jeni të përgatitur të punoni me dentistin për t'i lejuar ata të gjejnë zgjidhjen më të mirë.
+<br/>
+Ju gjithashtu do të duhet të konsideroni se periudha e vlerësimit mund të jetë një proces mjaft i gjatë që përfshin pajisje, përshtatje dhe ekzaminime për të kontrolluar pajisjen është e drejtë për ju.
+<br/>
+Mundësitë e Apneonit të Gjumit<br/>
+Kur bëhet fjalë për pajisje, ekzistojnë dy opsione kryesore që mund të merren parasysh.
+<br/>
+</p>
+<ol>
+<li>Zëdhënësi i dhëmbëve - kjo do të ndihmojë që gojët e pacientëve të mbajnë në një pozicion të ndryshëm kur flejnë. Këto pajisje punojnë duke e çliruar ajrin, duke i lejuar pacientit të marrë frymë më lehtë. Këto mund të bëhen me porosi për t'i bërë ato të përsosura për nevojat e individit dhe performanca e pajisjes do të testohet gjatë një numri sesionesh për të kontrolluar se është e rehatshme që pacienti të veshin. Këto gjithashtu mund të sillen në internet, megjithatë, pacientët duhet të jenë të vetëdijshëm se, në mënyrë që një zëdhënës të jetë efektiv, duhet të bëhet me porosi për t'iu përshtatur nevojave të tyre.</li>
+<li>Mbajtësi i gjuhës - këto nuk përdoren aq shpesh, por ndonjëherë ato sugjerohen nga dentistët si një zgjidhje për Apnea e Gjumit. Ky aparat funksionon duke pozicionuar gjuhën e pacientit në mënyrë që të mos jetë në gjendje të mbërthejë rrugët e frymëmarrjes. Ashtu si me një zinxhir dentar, mund të marrë disa sesione dhe rregullime për të siguruar që është i përshtatshëm për pacientin.</li>	
+</ol>
+</div>
+</div>
+	  <div id="footer">
+		<div id="copyright">
+            <div id="map">
+				<div id="map_border">
+					<div id="map_canvas"></div>
+				</div>
+			</div>
+			<h3><span style="color: white;">200m nga Pazari i Ri, Përballë Optika Roma</span> 0693919755</h3>
+			<p>Copyright © 2017</p>	
+		</div>
+		<div class="socialbuttons">
+			<a href="https://www.facebook.com/klinikadentareketident/"></a>
+			<a href="https://instagram.com/ketident"></a>
+			<a href="https://www.linkedin.com/company-beta/18217103/"></a>
+		</div>
+	  </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110808708-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-110808708-1');
+	</script>
+
+    <meta charset="UTF-8">
+    <title>Klinika Dentare KETIDENT</title>
+	<meta name="keywords" content="klinike,dentist,klinike dentare,implante,zbardhim,zirkon,porcelan,ura,heqje,mbushje,gureza" />
+	<meta name="description" content="Klinika dentare KetiDent ofron mbushje Estetike, FASETA, Zbardhim, Fluorizim, Piercing, Pastrim gurezash, Ura porcelan, Ura ZIRKON, Proteza, IMPLANTE dhe Drejtim Dhembesh" />
+
+	<meta property="og:url" content="http://ketident.com/">
+	<meta property="og:title" content="Kreu">
+	<meta property="og:description" content="Klinika dentare KetiDent ofron mbushje Estetike, FASETA, Zbardhim, Fluorizim, Piercing, Pastrim gurezash, Ura porcelan, Ura ZIRKON, Proteza, IMPLANTE dhe Drejtim Dhembesh">
+	<meta property="og:site_name" content="Klinika Dentare KetiDent">
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<style>
+		body { margin: 0px; padding: 0px;  font-family: "Poppins", "Montserrat", "Trebuchet MS", Helvetica, sans-serif; }
+		#bg {
+			background-image: url("../../images/artikuj/keni-perdorur-furcen-e-dikujt-tjeter.jpg");
+			background-repeat:no-repeat; 
+			background-attachment:fixed;
+			background-position:center center;
+			-webkit-background-size:cover;
+			-moz-background-size:cover;
+			-o-background-size:cover;
+			background-size:cover;
+			display:table;
+			height:800px;
+			width:100%;
+		}
+		#logo img { margin: 40px; }
+		#social .socialbuttons { margin: 10px 50px 40px 40px;float:right; min-width: 200px; max-width:400px; }
+		#slogan { text-align: center; }
+		#content { background-color: #f2f2f2; padding-bottom: 70px;}
+		#content p { margin:0 }
+		#contentWrapper { min-width: 270px; max-width: 1024px; margin:0 auto; }
+		#contentWrapper h1 { margin: 0; text-align: center; padding: 20px; }
+		#slogan h1 { font-size: 70px; font-weight: 700; line-height: 96px; letter-spacing: 2px; color:white; text-decoration: underline;}	
+		#slogan a { display:inline-block; background-color: #c01b1b; text-decoration:none; color:white; padding:10px; margin-bottom:300px; }
+
+		#services h2 { padding: 60px 30px 30px 30px; color: #d61e1e; font-size:34px; font-weight: 700; text-align:center; margin: 0; }
+		#services ul { list-style: square; margin:0px; padding:0px; margin-left: 20px; }
+		#services li { color: #a3a3a3; padding:5px; }
+
+		#services .clear { margin-bottom: 100px; }
+		#serviceList { width:200px; margin:0 auto; }
+
+		#services { max-width: 1024px; margin: 0 auto;  }
+		#serviceContainer { min-width: 270px; float: left; width: 50%; }
+		#clinicPhoto { min-width: 270px; overflow:hidden; float: left; width: 50%; }
+		#footer { background-color: #2b2f3a; text-align: center;} 
+		#footer img { padding:20px;}
+		#footer .socialbuttons { margin:0 auto; margin-top:40px; padding-bottom:40px;}
+		#copyright { background: #414757; color: #a3a3a3;} 
+		#copyright p { padding-bottom:50px;}
+		#copyright h3 { font-size: 30px; font-weight: 700; line-height: 42px;letter-spacing: inherit;  }
+		#map_border { padding:10px; background:white; width:50%; margin:0 auto; position:relative; top:-40px; min-width:240px;}
+		#map_canvas { height:225px; }
+		.clear { clear:both; }
+		.socialbuttons { width:103px; height:18px; background-image: url("../../images/social.PNG"); background-repeat: no-repeat;}
+		.socialbuttons a { display:inline-block; width:33px; height:18px; float:left;}
+		
+		@media only screen and (max-width: 769px){ #bg { background-position: center 0%; background-attachment: scroll !important; min-height: 200px; max-height: 400px; } #slogan h1 { font-size: 28px; line-height: 38.4px;} #logo{ margin:0 auto;} #header .left50 { float: none; width:100%; } #logo img { margin: 0 auto; display: block; padding:30px 15px 15px 15px; zoom:0.7; } #social .socialbuttons { margin: 0 auto; width: 99px; float:none; min-width: auto; max-width:auto; } }
+
+		.slider {  }
+		.slider-wrapper { height: 550px; overflow: hidden; }
+		.slide { float: left; position: absolute; width: 100%; max-width: 500px; opacity: 0; transition: opacity 1s linear; }
+		.slider-wrapper > .slide:first-child { opacity: 1; }
+	</style>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
+	<script type="text/javascript">
+	  	function Slideshow( element ) {
+			this.el = document.querySelector( element );
+			this.init();
+		}
+		
+		Slideshow.prototype = {
+			init: function() {
+				this.wrapper = this.el.querySelector( ".slider-wrapper" );
+				this.slides = this.el.querySelectorAll( ".slide" );
+				this.previous = this.el.querySelector( ".slider-previous" );
+				this.next = this.el.querySelector( ".slider-next" );
+				this.index = 0;
+				this.total = this.slides.length;
+				this.timer = null;
+				
+				this.action();
+				this.stopStart();	
+			},
+			_slideTo: function( slide ) {
+				var currentSlide = this.slides[slide];
+				currentSlide.style.opacity = 1;
+				
+				for( var i = 0; i < this.slides.length; i++ ) {
+					var slide = this.slides[i];
+					if( slide !== currentSlide ) {
+						slide.style.opacity = 0;
+					}
+				}
+			},
+			action: function() {
+				var self = this;
+				self.timer = setInterval(function() {
+					self.index++;
+					if( self.index == self.slides.length ) {
+						self.index = 0;
+					}
+					self._slideTo( self.index );
+					
+				}, 3000);
+			},
+			stopStart: function() {
+				var self = this;
+				self.el.addEventListener( "mouseover", function() {
+					clearInterval( self.timer );
+					self.timer = null;
+					
+				}, false);
+				self.el.addEventListener( "mouseout", function() {
+					self.action();
+					
+				}, false);
+			}
+			
+			
+		};
+		
+		document.addEventListener( "DOMContentLoaded", function() {		
+			var slider = new Slideshow( "#main-slider" );		
+		});
+	
+    	function initialize() {
+		    var position = new google.maps.LatLng(41.330951, 19.828522);
+		    var myOptions = {
+		      zoom: 17,
+		      center: position,
+		      mapTypeId: google.maps.MapTypeId.ROADMAP
+		    };
+		    var map = new google.maps.Map(
+		        document.getElementById("map_canvas"),
+		        myOptions);
+		 
+		    var marker = new google.maps.Marker({
+		        position: position,
+		        map: map,
+		        title:"KETIDENT"
+		    });  
+		 
+		    var contentString = 'Klinika Dentare KETIDENT';
+		    var infowindow = new google.maps.InfoWindow({
+		        content: contentString
+		    });
+		 
+		    google.maps.event.addListener(marker, 'click', function() {
+		      infowindow.open(map,marker);
+		    }); 
+	  	}
+	</script>
+  </head>
+  <body onload="initialize()">
+  <div id="container">
+		<div id="bg">
+		  <a href="http://ketident.com/"><img src="../../images/al.jpg"></img></a>
+		  <a href="http://ketident.com/it/"><img src="../../images/it.jpg"></img></a>
+		  <div id="header">
+			<div id="logo" class="left50">
+				<img src="../../images/logo.jpg"/>
+			</div>
+			<div id="social" class="left50">
+				<div class="socialbuttons">
+					<a href="https://www.facebook.com/klinikadentareketident/"></a>
+					<a href="https://instagram.com/ketident"></a>
+					<a href="https://www.linkedin.com/company-beta/18217103/"></a>
+				</div>
+			</div>
+			<div class="clear"></div>
+		  </div>
+		  <div id="slogan">
+			<h1>Shëndeti fillon nga goja</h1>
+			<a href="tel:00355693919755">0693919755</a>
+		  </div>
+		</div>
+	  <div id="content">
+	  	<div id="contentWrapper">
+	  		<h1>Trauma Dentare</h1>
+<p>
+	Kur qëndrova në shtëpinë e një miku të ri këtë verë, vura re se kishte një sirtar të tërë të mbushur me furça dhëmbësh të reja. Kjo më goditi aq të çuditshëm në atë kohë, meqë shumica e mysafirëve u përdorën për të mos blerë toothbrushes të freskët për mysafirët e tyre. Për më tepër, unë i njihja çiftet që ndajnë toothbrushes, dhe nuk duket të shqetësojë ata në të paktën. Ndërsa mendova se cila ngjyrë do të përdorja në mishrat e mia nga sirtari i mikut tim, megjithatë, implikimi i plotë për ndarjen e mjeteve me higjienë orale me të tjerët më goditi. Unë nuk e ndajnë edhe brushat e grimcave me të tjerët, dhe qerpikët e mi nuk janë të mbushur me baktere dhe copa të vjetra ushqimi si goja ime. Fillova të pyesim: cilat janë rreziqet për të ndarë toothbrushes me të tjerët? Dhe a ka ndërgjegjësimi i tyre që të çojnë në një blerje të furçave të reja për prirjen e mysafirëve?
+<br/>
+Ka nga ata që ndjekin logjikën e "Nëse unë shkëmbej spit me dikë, atëherë është e njëjta gjë si ndarja e një furçë dhëmbësh me ta" - jo kështu! Jo vetëm që po futni baktere të huaja në gojën tuaj dhe po e lini veten tuaj për personin tjetër, por brushing ndonjëherë mund të shkaktojë gjakderdhje. Kjo është më e rrezikshme se sa tingëllon, pasi ndarja e një furçë dhëmbësh me dikë në këtë rrethanë hap edhe ju dhe ata deri në sëmundje të ndryshme të gjakut, të tilla si hepatiti. Ndërkohë, adage e përjetshme, "cooties nuk janë ngjitëse" ka provuar të mos jetë aq e vërtetë sa kemi menduar. Dëmtimet janë shkaktuar nga një baktere ngjitëse - kjo vetëm dha një kuptim krejt të ri për ndarjen me një mik apo të dashur.
+<br/>
+Pra, cila është rregulli i artë për larja e dhëmbëve? Për një, përdorni një furçë me shpohet e butë për të shmangur gërryerjen e mishit të dhëmbëve dhe për të hequr ato, sidomos tani që e dini se çfarë mund të ju ekspozojë potencialisht. Furçë dy herë në ditë dhe pastroj dhëmbët me pe, too! Brushing pas mëngjes ndihmon shpëtoj gojën tuaj të pjesëve të mbetura të ushqimit që mund të fillojnë të prishen në gojën tuaj pas disa orësh, duke shkaktuar që të keni frymë të keqe, edhe nëse i keni krehur vetëm dhëmbët. Sterilizoni furçën tuaj të dhëmbëve-përdorni ujë të nxehtë, madje edhe të valë për të vrarë të gjitha bakteret e mbushura me të. Ndryshoni furçën tuaj të dhëmbëve të paktën sa herë që ndryshoni datat tuaja - thjesht duke qeshur - por seriozisht, rreth çdo tre muaj. Furça dhëmbësh të plaket dhe të lodhet shpejt. Dhe natyrisht, siç mund ta keni menduar, pjesa më e rëndësishme e këshillave - mos e ndani furçën tuaj të dhëmbëve me të tjerët. Sigurisht, ju mund të ndani jello, kos dhe pështymë-oh my! - por kjo nuk do të thotë që ju duhet të ndani pajisjen tuaj të pastrimit të dhëmbëve.
+<br/>
+Ndërsa unë hoqa një furçë dhëmbësh të verdhë nga paketimi i tij i këndshëm dhe i pastër, e konsiderova zgjuar atë për ta falënderuar për mendimin e tij dhe për taktikat e mençura të higjenës së gojës. Por, ndërsa i pastrova dhëmbët me një furçë të re, vendosa të kthehesha në favor dhe ta lavaja të flejë vetëm disa minuta.
+</p>
+</div>
+</div>
+	  <div id="footer">
+		<div id="copyright">
+            <div id="map">
+				<div id="map_border">
+					<div id="map_canvas"></div>
+				</div>
+			</div>
+			<h3><span style="color: white;">200m nga Pazari i Ri, Përballë Optika Roma</span> 0693919755</h3>
+			<p>Copyright © 2017</p>	
+		</div>
+		<div class="socialbuttons">
+			<a href="https://www.facebook.com/klinikadentareketident/"></a>
+			<a href="https://instagram.com/ketident"></a>
+			<a href="https://www.linkedin.com/company-beta/18217103/"></a>
+		</div>
+	  </div>
+  </div>
+  </body>
+</html>
