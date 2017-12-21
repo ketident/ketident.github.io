@@ -12,19 +12,26 @@
 	</script>
 
     <meta charset="UTF-8">
-    <title>Clinica Dentale KETIDENT - con prezzi economici e qualità e garanzia di livello Europeo - Dentista in Tirana, ALBANIA</title>
-	<meta name="keywords" content="clinica, dentista, clinica dentale, impianti, sbiancamento, zircone, porcellana, ponte, estrazioni, otturazioni, pulizia dei denti" />
-	<meta namotticae="description" content="Clinica Dentale KetiDent offre otturazioni, Faccette, sbiancamento, fluorizzazione, piercing, pulizia dei denti, ponte in porcellana, ponte ZIRKON, protesi, impianti e ortodonzia" />
+    <title>Klinika Dentare KETIDENT</title>
+	<meta name="keywords" content="klinike,dentist,klinike dentare,implante,zbardhim,zirkon,porcelan,ura,heqje,mbushje,gureza" />
+	<meta name="description" content="Klinika dentare KetiDent ofron mbushje Estetike, FASETA, Zbardhim, Fluorizim, Piercing, Pastrim gurezash, Ura porcelan, Ura ZIRKON, Proteza, IMPLANTE dhe Drejtim Dhembesh" />
 
-	<meta property="og:url" content="http://ketident.com/it">
-	<meta property="og:title" content="Clinica Dentale KETIDENT - con prezzi economici e qualità e garanzia di livello Europeo - Dentista in Tirana, ALBANIA">
-	<meta property="og:description" content="Clinica Dentale KetiDent offre riempimento, fasi, sbiancamento, fluorizzazione, piercing, rimozione di guru, ponte in porcellana, ponte ZIRKON, protesi, impianti e cure dentarie">
-	<meta property="og:site_name" content="Clinica Dentale KetiDent">
+	<meta property="og:url" content="http://ketident.com/">
+	<meta property="og:title" content="Kreu">
+	<meta property="og:description" content="Klinika dentare KetiDent ofron mbushje Estetike, FASETA, Zbardhim, Fluorizim, Piercing, Pastrim gurezash, Ura porcelan, Ura ZIRKON, Proteza, IMPLANTE dhe Drejtim Dhembesh">
+	<meta property="og:site_name" content="Klinika Dentare KetiDent">
 
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
 	<style>
+		@media (min-width:519px) {
+			#contentWrapper {  max-width:500px; }
+		}
+		@media (min-width:1038px) {
+			#contentWrapper {  max-width:1024px; }
+		}
+
 		body { margin: 0px; padding: 0px;  font-family: "Poppins", "Montserrat", "Trebuchet MS", Helvetica, sans-serif; }
 		#bg {
 			background-image: url("../images/klinika.jpg");
@@ -44,8 +51,12 @@
 		#slogan { text-align: center; }
 		#content { background-color: #f2f2f2; padding-bottom: 70px;}
 		#content p { margin:0 }
-		#contentWrapper { min-width: 270px; max-width: 1024px; margin:0 auto; }
+		#contentWrapper {  margin:0 auto; }
+		#contentWrapper a { display: block; text-decoration: none; max-width: 500px; min-width: 150px; float: left; margin: 4px 4px 14px 4px; }
+		#contentWrapper a img{ width: 100%; }		    
+		#contentWrapper a h3 { margin: 0;  }
 		#contentWrapper h1 { margin: 0; text-align: center; padding: 20px; text-transform: capitalize; }
+
 		#slogan h1 { font-size: 70px; font-weight: 700; line-height: 96px; letter-spacing: 2px; color:white; text-decoration: underline;}	
 		#slogan a { display:inline-block; background-color: #c01b1b; text-decoration:none; color:white; padding:10px; margin-bottom:300px; }
 
@@ -67,22 +78,20 @@
 		#copyright h3 { font-size: 30px; font-weight: 700; line-height: 42px;letter-spacing: inherit;  }
 		#map_border { padding:10px; background:white; width:50%; margin:0 auto; position:relative; top:-40px; min-width:240px;}
 		#map_canvas { height:225px; }
-		.socialbuttons { width:103px; height:18px; background-image: url("../../../images/social.PNG"); background-repeat: no-repeat;}
+		.clear { clear:both; }
+		.socialbuttons { width:103px; height:18px; background-image: url("../images/social.PNG"); background-repeat: no-repeat;}
 		.socialbuttons a { display:inline-block; width:33px; height:18px; float:left;}
 		
 		@media only screen and (max-width: 769px){ #bg { background-position: center 0%; background-attachment: scroll !important; min-height: 200px; max-height: 400px; } #slogan h1 { font-size: 28px; line-height: 38.4px;} #logo{ margin:0 auto;} #header .left50 { float: none; width:100%; } #logo img { margin: 0 auto; display: block; padding:30px 15px 15px 15px; zoom:0.7; } #social .socialbuttons { margin: 0 auto; width: 99px; float:none; min-width: auto; max-width:auto; } }
-
 
 		.slider {  }
 		.slider-wrapper { height: 550px; overflow: hidden; }
 		.slide { float: left; position: absolute; width: 100%; max-width: 500px; opacity: 0; transition: opacity 1s linear; }
 		.slider-wrapper > .slide:first-child { opacity: 1; }
-
-		.clear { clear: both;  }
 	</style>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
 	<script type="text/javascript">
-		function Slideshow( element ) {
+	  	function Slideshow( element ) {
 			this.el = document.querySelector( element );
 			this.init();
 		}
@@ -167,17 +176,17 @@
 		    google.maps.event.addListener(marker, 'click', function() {
 		      infowindow.open(map,marker);
 		    }); 
-	  	}	
+	  	}
 	</script>
   </head>
   <body onload="initialize()">
   <div id="container">
 		<div id="bg">
-		  <a href="http://ketident.com/"><img src="../../../images/al.jpg"></img></a>
-		  <a href="http://ketident.com/it/"><img src="../../../images/it.jpg"></img></a>
+		  <a href="http://ketident.com/"><img src="../images/al.jpg"></img></a>
+		  <a href="http://ketident.com/it/"><img src="../images/it.jpg"></img></a>
 		  <div id="header">
 			<div id="logo" class="left50">
-				<img src="../../../images/logo.jpg"/>
+				<img src="../images/logo.jpg"/>
 			</div>
 			<div id="social" class="left50">
 				<div class="socialbuttons">
@@ -189,16 +198,28 @@
 			<div class="clear"></div>
 		  </div>
 		  <div id="slogan">
-			<h1>La salute inizia dalla bocca</h1>
+			<h1>Shëndeti fillon nga goja</h1>
 			<a href="tel:00355693919755">0693919755</a>
 		  </div>
 		</div>
 	  <div id="content">
 	  	<div id="contentWrapper">
-	  		<h1>lavoro futuro dentista</h1>
-
-</div>
-</div>
+	  		<h1>Artikuj</h1>
+			<a href="#">
+				<img src="../images/artikuj/8-keshilla-per-nje-buzeqeshje-te-bukur.jpg"/>
+				<h3>test</h3>
+			</a>
+			<a href="#">
+				<img src="../images/artikuj/8-keshilla-per-nje-buzeqeshje-te-bukur.jpg"/>
+				<h3>test</h3>
+			</a>
+			<a href="#">
+				<img src="../images/artikuj/8-keshilla-per-nje-buzeqeshje-te-bukur.jpg"/>
+				<h3>test</h3>
+			</a>
+			<div class="clear"></div>
+		</div>
+	  </div>
 	  <div id="footer">
 		<div id="copyright">
             <div id="map">
@@ -206,7 +227,7 @@
 					<div id="map_canvas"></div>
 				</div>
 			</div>
-			<h3><span style="color: white;">200m metri dal Pazari i Ri, davanti Ottica Roma</span> 0693919755</h3>
+			<h3><span style="color: white;">200m nga Pazari i Ri, Përballë Optika Roma</span> 0693919755</h3>
 			<p>Copyright © 2017</p>	
 		</div>
 		<div class="socialbuttons">
@@ -217,3 +238,4 @@
 	  </div>
   </div>
   </body>
+</html>
