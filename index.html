@@ -26,10 +26,10 @@
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 	<style>
 		@media (min-width:519px) {
-			#contentWrapper {  max-width:500px; }
+			.wrapper {  max-width:500px; }
 		}
 		@media (min-width:1038px) {
-			#contentWrapper {  max-width:1024px; }
+			.wrapper {  max-width:1024px; }
 		}
 
 		body { margin: 0px; padding: 0px;  font-family: "Poppins", "Montserrat", "Trebuchet MS", Helvetica, sans-serif; }
@@ -51,25 +51,25 @@
 		#slogan { text-align: center; }
 		#content { background-color: #f2f2f2; padding-bottom: 70px;}
 		#content p { margin:0 }
-		#contentWrapper {  margin:0 auto; }
-		#contentWrapper a { display: block; text-decoration: none; max-width: 500px; min-width: 150px; float: left; margin: 4px 4px 14px 4px; height: 303px;}
-		#contentWrapper a img{ width: 100%; }		    
-		#contentWrapper a h3 { margin: 0;  }
-		#contentWrapper h3 { text-align: center; }	
-		#contentWrapper h1 { margin: 0; text-align: center; padding: 20px; text-transform: capitalize; }
+		
+		.wrapper { margin:0 auto; }
+		.box { max-width: 500px; min-width: 150px; float: left; }
+		#articles h1 { margin: 0; text-align: center; padding: 20px; text-transform: capitalize; }
+		#articles a { display: block; text-decoration: none; margin: 4px 4px 14px 4px; height: 303px;}
+		#articles a img{ width: 100%; }
+		#articles h3 { text-align: center; }		    
+		#articles a h3 { margin: 0;  }
 
 		#slogan h1 { font-size: 70px; font-weight: 700; line-height: 96px; letter-spacing: 2px; color:white; text-decoration: underline;}	
 		#slogan a { display:inline-block; background-color: #c01b1b; text-decoration:none; color:white; padding:10px; margin-bottom:300px; }
 
 		#services h2 { padding: 60px 30px 30px 30px; color: #d61e1e; font-size:34px; font-weight: 700; text-align:center; margin: 0; }
-		#services ul { list-style: square; margin:0px; padding:0px; margin-left: 20px; }
+		#services ul { list-style: square; margin:0px; padding:0px; margin-left: 20px; width: 150px; margin: 0 auto;  }
 		#services li { color: #a3a3a3; padding:5px; }
+		#serviceList { width: 512px; }
 
-		#serviceList { width:200px; margin:0 auto; }
+		#clinicPhoto { height: 600px; overflow: hidden;  }
 
-		#services { max-width: 1024px; margin: 0 auto;  }
-		#serviceContainer { min-width: 270px; float: left; width: 50%; }
-		#clinicPhoto { min-width: 270px; overflow:hidden; float: left; width: 50%; }
 		#footer { background-color: #2b2f3a; text-align: center;} 
 		#footer img { padding:20px;}
 		#footer .socialbuttons { margin:0 auto; margin-top:40px; padding-bottom:40px;}
@@ -84,73 +84,10 @@
 		
 		@media only screen and (max-width: 769px){ #bg { background-position: center 0%; background-attachment: scroll !important; min-height: 200px; max-height: 400px; } #slogan h1 { font-size: 28px; line-height: 38.4px;} #logo{ margin:0 auto;} #header .left50 { float: none; width:100%; } #logo img { margin: 0 auto; display: block; padding:30px 15px 15px 15px; zoom:0.7; } #social .socialbuttons { margin: 0 auto; width: 99px; float:none; min-width: auto; max-width:auto; } }
 
-		.slider {  }
-		.slider-wrapper { height: 550px; overflow: hidden; }
-		.slide { float: left; position: absolute; width: 100%; max-width: 500px; opacity: 0; transition: opacity 1s linear; }
-		.slider-wrapper > .slide:first-child { opacity: 1; }
+		.slide{animation:fading 4s infinite}@keyframes fading{0%{opacity:0;}50%{opacity:1;}100%{opacity:0;}}
 	</style>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
 	<script type="text/javascript">
-	  	function Slideshow( element ) {
-			this.el = document.querySelector( element );
-			this.init();
-		}
-		
-		Slideshow.prototype = {
-			init: function() {
-				this.wrapper = this.el.querySelector( ".slider-wrapper" );
-				this.slides = this.el.querySelectorAll( ".slide" );
-				this.previous = this.el.querySelector( ".slider-previous" );
-				this.next = this.el.querySelector( ".slider-next" );
-				this.index = 0;
-				this.total = this.slides.length;
-				this.timer = null;
-				
-				this.action();
-				this.stopStart();	
-			},
-			_slideTo: function( slide ) {
-				var currentSlide = this.slides[slide];
-				currentSlide.style.opacity = 1;
-				
-				for( var i = 0; i < this.slides.length; i++ ) {
-					var slide = this.slides[i];
-					if( slide !== currentSlide ) {
-						slide.style.opacity = 0;
-					}
-				}
-			},
-			action: function() {
-				var self = this;
-				self.timer = setInterval(function() {
-					self.index++;
-					if( self.index == self.slides.length ) {
-						self.index = 0;
-					}
-					self._slideTo( self.index );
-					
-				}, 3000);
-			},
-			stopStart: function() {
-				var self = this;
-				self.el.addEventListener( "mouseover", function() {
-					clearInterval( self.timer );
-					self.timer = null;
-					
-				}, false);
-				self.el.addEventListener( "mouseout", function() {
-					self.action();
-					
-				}, false);
-			}
-			
-			
-		};
-		
-		document.addEventListener( "DOMContentLoaded", function() {		
-			var slider = new Slideshow( "#main-slider" );		
-		});
-	
     	function initialize() {
 		    var position = new google.maps.LatLng(41.330951, 19.828522);
 		    var myOptions = {
@@ -176,6 +113,21 @@
 		    google.maps.event.addListener(marker, 'click', function() {
 		      infowindow.open(map,marker);
 		    }); 
+
+    	  	var myIndex = 0;
+			carousel();
+
+			function carousel() {
+			    var i;
+			    var x = document.getElementsByClassName("slide");
+			    for (i = 0; i < x.length; i++) {
+			       x[i].style.display = "none";  
+			    }
+			    myIndex++;
+			    if (myIndex > x.length) {myIndex = 1}    
+			    x[myIndex-1].style.display = "block";  
+			    setTimeout(carousel, 3000);    
+			}
 	  	}
 	</script>
   </head>
@@ -203,9 +155,9 @@
 		  </div>
 		</div>
 	  <div id="content">
-		  <div id="services">
+		  <div id="services" class="wrapper">
 		  	<h2>Shërbimet</h2>
-			<div id="serviceContainer">
+			<div class="box">
 				<div id="serviceList">				
 					<ul>
 						<li>Mbushje Estetike</li>
@@ -222,39 +174,34 @@
 					<ul>
 				</div>
 			</div>
-			<div id="clinicPhoto">
-				<div class="slider" id="main-slider">
-					<div class="slider-wrapper">
-						<img src="images/1.jpg" class="slide" />
-						<img src="images/2.jpg" class="slide" />
-						<img src="images/4.jpg" class="slide" />
-						<img src="images/5.jpg" class="slide" />
-						<img src="images/6.jpg" class="slide" />
-						<img src="images/7.jpg" class="slide" />
-						<img src="images/8.jpg" class="slide" />
-						<img src="images/9.jpg" class="slide" />
-						<img src="images/10.jpg" class="slide" />
-						<img src="images/11.jpg" class="slide" />
-						<img src="images/12.jpg" class="slide" />
-						<img src="images/13.jpg" class="slide" />
-						<img src="images/14.jpg" class="slide" />
-						<img src="images/15.jpg" class="slide" />
-						<img src="images/16.jpg" class="slide" />
-						<img src="images/17.jpg" class="slide" />
-						<img src="images/18.jpg" class="slide" />
-						<img src="images/19.jpg" class="slide" />
-						<img src="images/20.jpg" class="slide" />
-					</div>
-				</div>	
+			<div id="clinicPhoto" class="box">
+				<img src="images/1.jpg" class="slide" style="width:100%" />
+				<img src="images/2.jpg" class="slide" style="width:100%" />
+				<img src="images/4.jpg" class="slide" style="width:100%" />
+				<img src="images/5.jpg" class="slide" style="width:100%" />
+				<img src="images/6.jpg" class="slide" style="width:100%" />
+				<img src="images/7.jpg" class="slide" style="width:100%" />
+				<img src="images/8.jpg" class="slide" style="width:100%" />
+				<img src="images/9.jpg" class="slide" style="width:100%" />
+				<img src="images/10.jpg" class="slide" style="width:100%" />
+				<img src="images/11.jpg" class="slide" style="width:100%" />
+				<img src="images/12.jpg" class="slide" style="width:100%" />
+				<img src="images/13.jpg" class="slide" style="width:100%" />
+				<img src="images/14.jpg" class="slide" style="width:100%" />
+				<img src="images/15.jpg" class="slide" style="width:100%" />
+				<img src="images/16.jpg" class="slide" style="width:100%" />
+				<img src="images/17.jpg" class="slide" style="width:100%" />
+				<img src="images/18.jpg" class="slide" style="width:100%" />
+				<img src="images/19.jpg" class="slide" style="width:100%" />
+				<img src="images/20.jpg" class="slide" style="width:100%" />
 			</div>
 			<div class="clear"></div>
-			<div id="contentWrapper">
+			<div id="articles">
 				<h3>Artikuj</h3>
-				<a href="./artikuj/10-fakte-argetuese-per-femijet-ne-dentistri/"><img src="images/artikuj/10-fakte-argetuese-per-femijet-ne-dentistri.jpg"/><h3>10 fakte argetuese per femijet ne dentistri</h3></a>                                                                                                                              
-				<a href="./artikuj/3-njerez-te-famshem-me-implante-dentare/"><img src="images/artikuj/3-njerez-te-famshem-me-implante-dentare.jpg"/><h3>3 njerez te famshem me implante dentare</h3></a>
+				<a class="box" href="./artikuj/10-fakte-argetuese-per-femijet-ne-dentistri/"><img src="images/artikuj/10-fakte-argetuese-per-femijet-ne-dentistri.jpg"/><h3>10 fakte argetuese per femijet ne dentistri</h3></a>                                                                                                                              
+				<a class="box" href="./artikuj/3-njerez-te-famshem-me-implante-dentare/"><img src="images/artikuj/3-njerez-te-famshem-me-implante-dentare.jpg"/><h3>3 njerez te famshem me implante dentare</h3></a>
 				<div class="clear"></div>
 				<a style="height:auto;" href="./artikuj/"><h3>me shume...</h3></a>
-				<div class="clear"></div>
 			</div>
 		  </div>
 	  </div>
