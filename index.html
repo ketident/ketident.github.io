@@ -34,22 +34,16 @@
 		}
 
 		body { margin: 0px; padding: 0px;  font-family: "Poppins", "Montserrat", "Trebuchet MS", Helvetica, sans-serif; }
-		#bg {
-			background-image: url("images/klinika.jpg");
-			background-repeat:no-repeat; 
-			background-attachment:fixed;
-			background-position:center center;
-			-webkit-background-size:cover;
-			-moz-background-size:cover;
-			-o-background-size:cover;
-			background-size:cover;
-			display:table;
-			height:800px;
-			width:100%;
-		}
+		#bg { background-image: url("images/klinika.jpg");background-repeat:no-repeat; background-attachment:fixed;background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;display:table;height:800px;width:100%;	}
 		#logo img { margin: 40px; }
 		#social .socialbuttons { margin: 10px 50px 40px 40px;float:right; min-width: 200px; max-width:400px; }
 		#slogan { text-align: center; }
+		#slogan h1 { font-size: 70px; font-weight: 700; line-height: 96px; letter-spacing: 2px; color:white; text-decoration: underline;}	
+		#tel { display:inline-block; background-color: #c01b1b; text-decoration:none; color:white; padding:10px; }
+		#dr { display: block; color:white; margin-bottom:250px; margin-top: 50px; }
+		#dr img { border-radius: 50%; height: 50px; margin-right: 10px; border-style: solid; border-color: white; border-width: 1px; }
+		#drName { vertical-align: top; line-height: 50px;}
+
 		#content { background-color: #f2f2f2; padding-bottom: 70px;}
 		#content p { margin:0 }
 		
@@ -60,9 +54,6 @@
 		#articles a img{ width: 100%; }
 		#articles h3 { text-align: center; }		    
 		#articles a h3 { margin: 0;  }
-
-		#slogan h1 { font-size: 70px; font-weight: 700; line-height: 96px; letter-spacing: 2px; color:white; text-decoration: underline;}	
-		#slogan a { display:inline-block; background-color: #c01b1b; text-decoration:none; color:white; padding:10px; margin-bottom:300px; }
 
 		#services h2 { padding: 60px 30px 30px 30px; color: #d61e1e; font-size:34px; font-weight: 700; text-align:center; margin: 0; }
 		#services ul { list-style: square; margin:20px 0px 0px 40px; padding:0px; }
@@ -151,7 +142,8 @@
 		  </div>
 		  <div id="slogan">
 			<h1>Shëndeti fillon nga goja</h1>
-			<a href="tel:00355693919755">0693919755</a>
+			<a id="tel" href="tel:00355693919755">0693919755</a>
+			<a id="dr" href="./dr-ketiona-agaj/"><img src="images/dr.jpg"/><span id="drName">Dr. Ketiona Agaj</span></a>
 		  </div>
 		</div>
 	  <div id="content">
