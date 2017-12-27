@@ -170,7 +170,7 @@
 		        title:"KETIDENT"
 		    });  
 		 
-		    var contentString = 'Klinika Dentare KETIDENT';
+		    var contentString = 'Clinica Dentale KETIDENT';
 		    var infowindow = new google.maps.InfoWindow({
 		        content: contentString
 		    });
@@ -178,6 +178,8 @@
 		    google.maps.event.addListener(marker, 'click', function() {
 		      infowindow.open(map,marker);
 		    }); 
+
+		    document.getElementById('content').scrollIntoView();
 	  	}
 	</script>
   </head>
@@ -188,7 +190,7 @@
 		  <a href="http://ketident.com/it/"><img src="../../images/it.jpg"></img></a>
 		  <div id="header">
 			<div id="logo" class="left50">
-				<img src="../../images/logo.jpg"/>
+				<a href="http://ketident.com/"><img src="../../images/logo.jpg"/></a>
 			</div>
 			<div id="social" class="left50">
 				<div class="socialbuttons">
