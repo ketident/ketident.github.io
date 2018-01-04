@@ -73,10 +73,13 @@
 		
 		@media only screen and (max-width: 769px){ #bg { background-position: center 0%; background-attachment: scroll !important; min-height: 200px; max-height: 400px; } #slogan h1 { font-size: 28px; line-height: 38.4px;} #logo{ margin:0 auto;} #header .left50 { float: none; width:100%; } #logo img { margin: 0 auto; display: block; padding:30px 15px 15px 15px; zoom:0.7; } #social .socialbuttons { margin: 0 auto; width: 99px; float:none; min-width: auto; max-width:auto; } }
 
-		#content table { width: 100%; }
 		#content table thead { font-weight: bold; }
 		#content table tr:nth-child(odd) td{		}
 		#content table tr:nth-child(even) td{ background: gray; }
+
+		.col1 { width: 120px; word-break: break;}
+		.col2 { width: 155px; word-break: break-all;}
+		.col3 { width: 25px; word-break: break;}
 	</style>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -167,7 +170,7 @@
 				<br/>
 				<a id="flights" href="#">Udhetime te lira per ne Shqiperi</a>
 				<br/>
-				*ketu supozohet qe nisja behet nga Milano sot dhe kthimini neser. Ju lutem, nderojeni destinacionin dhe ditet e nisjes dhe te kthimit. Keni parasysh qe cmimi eshte me i lire nese e planifikoni muaj me perpara.
+				*ketu supozohet qe nisja behet nga Milano sot dhe kthimi neser. Ju lutem, nderojeni destinacionin dhe ditet e nisjes dhe te kthimit. Keni parasysh qe cmimi eshte me i lire nese e planifikoni muaj me perpara.
 				<br>
 				<br/>
 				Akomodimi ne Tirane eshte i lire. Opsionet jane te ndryshme, hostele, <a href="https://www.airbnb.com/s/Tirana--Albania/homes?checkin=2017-12-27&checkout=2017-12-28&adults=1&children=0&infants=0&guests=1&source=mob&sem_keywords=airbnb.&allow_override%5B%5D=&ib=true&ne_lat=41.33710509995905&ne_lng=19.83292361957217&sw_lat=41.32835973991079&sw_lng=19.823589532200344&zoom=16&search_by_map=true&s_tag=0m94YJtd">Airbnb</a> dhe <a href="https://www.google.com/maps/place/Jolly+Hotel/@41.3292939,19.8254765,15z/data=!4m2!3m1!1s0x0:0x8c842c92e82f286b?sa=X&ved=0ahUKEwjh796Zx6rYAhXIJVAKHQO0ARgQ_BIIogEwDg">Hotele</a>. Sigurohuni qe te jene brenda unazes.
@@ -201,20 +204,20 @@
 					<tr><td></td><td>Shqiperi</td><td>Itali</td></tr>
 				<thead>
 				<tbody>
-					<tr><td>Udhetimi per Shqiperi</td><td>$100<br/><a href=https://flyernest.com/en/">https://flyernest.com/en/</a><br/><a href="https://www.albawings.com/">https://www.albawings.com/</a><br/><a href="https://www.blue-panorama.com">https://www.blue-panorama.com</a></td><td></td></tr>
-					<tr><td>Akomodimi</td><td>$30/Nata<br/><a href="https://www.airbnb.com/s/Tirana--Albania">https://www.airbnb.com/s/Tirana--Albania</a></td><td>$100/Nata</td></tr>
-					<tr><td>Ushqimi</td><td>$5/Vakti<br/><a href="http://era.al/shop/">http://era.al/shop/</a><br/><a href="https://www.facebook.com/RestaurantVita99/">https://www.facebook.com/RestaurantVita99/</a></td><td>$30/Vakti</td></tr>
-					<tr><td>Evente</td><td><a href="http://tiranaxxl.al/">http://tiranaxxl.al/</a><br/><a href="http://albania.al/calendar/">http://albania.al/calendar/</a></td><td></td></tr>
-					<tr><td>Vende turistike</td><td><a href="http://albania.al/destinations/">http://albania.al/destinations/</a> <br/>dhe<br/><a href="http://albania.al/activities/">http://albania.al/activities/</a></td><td></td></tr>
-					<tr><td>Implantet dentare</td><td>€700</td><td>€2500</td></tr>
-					<tr><td>Protezat lart dhe poshte</td><td>€300</td><td>€1800</td></tr>
-					<tr><td>Kellef zirkon</td><td>€200</td><td>€700</td></tr>
-					<tr><td>Kellef metal-porcelan</td><td>€70</td><td>€400</td></tr>
-					<tr><td>Mbushje</td><td>€25</td><td>60</td></tr>
-					<tr><td>Pastrim gurezash</td><td>€17</td><td>€70</td></tr>
-					<tr><td>Heqje nervi</td><td>€30-€40</td><td>€100 vetem 1 kanal</td></tr>
-					<tr><td>Zbardhim</td><td>€200</td><td>€600</td></tr>
-					<tr><td>Konsulta</td><td>€0</td><td>€50</td></tr>
+					<tr><td class="col1">Udhetimi per Shqiperi</td><td class="col2">€100<br/><a href="https://flyernest.com/en/">flyernest</a><br/><a href="https://www.albawings.com/">albawings</a><br/><a href="https://www.blue-panorama.com">blue-panorama</a></td><td class="col3"></td></tr>
+					<tr><td class="col1">Akomodimi</td><td class="col2">€30/Nata<br/><a href="https://www.airbnb.com/s/Tirana--Albania">airbnb</a></td><td class="col3">€100/Nata</td></tr>
+					<tr><td class="col1">Ushqimi</td><td class="col2">€5/Vakti<br/><a href="http://era.al/shop/">era</a><br/><a href="https://www.facebook.com/RestaurantVita99/">Vita99</a></td><td class="col3">€30/Vakti</td></tr>
+					<tr><td class="col1">Evente</td><td class="col2"><a href="http://tiranaxxl.al/">tiranaxxl</a><br/><a href="http://albania.al/calendar/">evente</a></td><td class="col3"></td></tr>
+					<tr><td class="col1">Vende turistike</td><td class="col2"><a href="http://albania.al/destinations/">destinacione</a> <br/>dhe<br/><a href="http://albania.al/activities/">aktivitete</a></td><td class="col3"></td></tr>
+					<tr><td class="col1">Implantet dentare</td><td class="col2">€700</td><td class="col3">€2500</td></tr>
+					<tr><td class="col1">Protezat lart dhe poshte</td><td class="col2">€300</td><td class="col3">€1800</td></tr>
+					<tr><td class="col1">Kellef zirkon</td><td class="col2">€200</td><td class="col3">€700</td></tr>
+					<tr><td class="col1">Kellef metal-porcelan</td><td class="col2">€70</td><td class="col3">€400</td></tr>
+					<tr><td class="col1">Mbushje</td><td class="col2">€25</td><td class="col3">€60</td></tr>
+					<tr><td class="col1">Pastrim gurezash</td><td class="col2">€17</td><td class="col3">€70</td></tr>
+					<tr><td class="col1">Heqje nervi</td><td class="col2">€30-€40</td><td class="col3">€100 vetem 1 kanal</td></tr>
+					<tr><td class="col1">Zbardhim</td><td class="col2">€200</td><td class="col3">€600</td></tr>
+					<tr><td class="col1">Konsulta</td><td class="col2">€0</td><td class="col3">€50</td></tr>
 				</tbody>
 			</table>
 		</div>
