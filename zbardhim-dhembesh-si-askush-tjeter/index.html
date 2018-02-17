@@ -32,36 +32,20 @@
 			#serviceList { width: 512px; }
 		}
 
-		body { margin: 0px; padding: 0px;  font-family: "Poppins", "Montserrat", "Trebuchet MS", Helvetica, sans-serif; }
-		#bg { background-attachment:fixed;background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;display:table; width:100%;	}
-		video {	min-width: 100%; min-height: 100%; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: -1; }
-		#logo img { margin: 40px; }
-		#social .socialbuttons { margin: 10px 50px 40px 40px;float:right; min-width: 200px; max-width:400px; }
-		#slogan { text-align: center; }
-		#slogan h1 { font-size: 70px; font-weight: 700; line-height: 96px; letter-spacing: 2px; color:white; text-decoration: underline;}	
-		#tel { display:inline-block; background-color: #c01b1b; text-decoration:none; color:white; padding:10px; }
-		#tel img { position: relative; top: 4px; left: -3px; }
-		#dr { display: block; color:white; margin-top: 50px; margin-bottom: 135px; }
+		body { margin: 0px; padding: 0px;  font-family: "Poppins", "Montserrat", "Trebuchet MS", Helvetica, sans-serif; background-color: #f2f2f2;}
+		video {	min-width: 100%; min-height: 100%;  z-index: -1; position: relative;  }
+		#contacts { position: absolute; top:0; left:0; }
+		
+		#logo img { margin: 20px; }
+		#bg { overflow: hidden; }
+	
+		#dr { display: block; color:black; margin-top: 50px; margin-bottom: 135px; }
 		#dr img { border-radius: 50%; height: 50px; margin-right: 10px; border-style: solid; border-color: white; border-width: 1px; }
 		#drName { vertical-align: top; line-height: 50px;}
 
 		#content { background-color: #f2f2f2; padding-bottom: 70px;}
-		#content p, h1 { margin:0; text-align: center; }
+		#content p, h1, a { margin:0; text-align: center; }
 		#content ul { list-style-type: none; text-align: center;}
-		
-		.wrapper { margin:0 auto; }
-		.box { max-width: 500px; min-width: 150px; float: left; }
-		#articles h1 { margin: 0; text-align: center; padding: 20px; text-transform: capitalize; }
-		#articles a { display: block; text-decoration: none; margin: 4px 4px 14px 4px; height: 303px;}
-		#articles a img{ width: 100%; }
-		#articles h3 { text-align: center; }		    
-		#articles a h3 { margin: 0;  }
-
-		#services h2 { padding: 60px 30px 30px 30px; color: #d61e1e; font-size:34px; font-weight: 700; text-align:center; margin: 0; }
-		#services ul { list-style: square; margin:20px 0px 0px 40px; padding:0px; }
-		#services li { color: #a3a3a3; padding:5px; }
-
-		#clinicPhoto { height: 600px; overflow: hidden; }
 
 		#footer { background-color: #2b2f3a; text-align: center;} 
 		#footer img { padding:20px;}
@@ -75,9 +59,11 @@
 		.socialbuttons { width:103px; height:18px; background-image: url("../images/social.PNG"); background-repeat: no-repeat;}
 		.socialbuttons a { display:inline-block; width:33px; height:18px; float:left;}
 		
-		@media only screen and (max-width: 769px){ #bg { background-position: center 0%; background-attachment: scroll !important; min-height: 200px; max-height: 400px; } #slogan h1 { font-size: 28px; line-height: 38.4px;} #logo{ margin:0 auto;} #header .left50 { float: none; width:100%; } #logo img { margin: 0 auto; display: block; padding:30px 15px 15px 15px; zoom:0.7; } #social .socialbuttons { margin: 0 auto; width: 99px; float:none; min-width: auto; max-width:auto; } }
-
-		.slide{animation:fading 4s infinite}@keyframes fading{0%{opacity:0;}50%{opacity:1;}100%{opacity:0;}}
+		@media only screen and (max-width: 769px)
+		{ 
+			video { left: -115px; }
+			#logo img { margin: 10px; zoom: 0.4; }
+		}
 	</style>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -152,38 +138,25 @@
   <body>
   <div id="container">
 		<div id="bg">
-			<video loop muted autoplay playsinline id="video"></video>
-
-		  <a href="http://ketident.com/"><img src="../images/al.jpg"></img></a>
-		  <a href="http://ketident.com/it/"><img src="../images/it.jpg"></img></a>
-		  <div id="header">
-			<div id="logo" class="left50">
-				<a href="http://ketident.com/"><img src="../images/logo.png"/></a>
-			</div>
-			<div id="social" class="left50">
-				<div class="socialbuttons">
-					<a href="https://www.facebook.com/klinikadentareketident/"></a>
-					<a href="https://instagram.com/ketident"></a>
-					<a href="https://www.linkedin.com/company/klinika-dentare-ketident"></a>
+		  <video loop muted autoplay playsinline id="video"></video>
+		  <div id="contacts">
+			  <div id="header">
+				<div id="logo">
+					<a href="http://ketident.com/"><img src="../images/logo.png"/></a>
 				</div>
+			  </div>
 			</div>
-			<div class="clear"></div>
-		  </div>
-		  <div id="slogan">
-			<a id="tel" href="tel:00355693919755"><img src="../images/tel.png"/>0693919755</a>
-			<a id="dr" href="./dr-ketiona-agaj/"><img src="../images/dr.jpg"/><span id="drName">Dr. Ketiona Agaj</span></a>
-		  </div>
 		</div>
 	  <div id="content">
-		  <h1>Ju zbardhim dhembet tuaj si askush tjeter</h1>
-		  
-		  <ul>
-		  	<li>Zbardhimi me efektiv ne treg</li>
-		  	<li>Metoda amerikane</li>
-		  	<li>Pa efekte anesore</li>
-		  	<li>Zgjat vetem 40 minuta</li>
-		  </ul>
+		<h1>Ju zbardhim dhembet tuaj si askush tjeter</h1>
+		<ul>
+			<li>Zbardhimi me efektiv ne treg</li>
+			<li>Metoda amerikane</li>
+			<li>Pa efekte anesore</li>
+			<li>Zgjat vetem 40 minuta</li>
+		</ul>
 
+		<a id="dr" href="./dr-ketiona-agaj/"><img src="../images/dr.jpg"/><span id="drName">Dr. Ketiona Agaj</span></a>
 	  </div>
 	  <div id="footer">
 		<div id="copyright">
