@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110808708-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-110808708-1');
+	</script>
+
+    <meta charset="UTF-8">
+    <title>Klinika dentare me e mire ne Tirane - Klinika Dentare KETIDENT</title>
+	<meta name="keywords" content="klinike,dentist,klinike dentare,implante,zbardhim,zirkon,porcelan,ura,heqje,mbushje,gureza" />
+	<meta name="description" content="Ne ju asistojme ne cdo moment, ne cdo orar per problemet tuaja dentare." />
+
+
+	<meta property="og:title" content="Klinika dentare me e mire ne Tirane - Klinika Dentare KETIDENT">
+	<meta property="og:description" content="Ne ju asistojme ne cdo moment, ne cdo orar per problemet tuaja dentare.">
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<style>
+		@media (min-width:519px) {
+			.wrapper {  max-width:500px; }
+		}
+		@media (min-width:1038px) {
+			.wrapper {  max-width:1024px; }
+			#serviceList { width: 512px; }
+		}
+
+		body { margin: 0px; padding: 0px;  font-family: "Poppins", "Montserrat", "Trebuchet MS", Helvetica, sans-serif; background-color: #f2f2f2;}
+		video {	min-width: 100%; min-height: 100%;  z-index: -1; position: relative; }
+		#contacts { position: absolute; top:0; left:0; }
+		
+		#logo img { margin: 20px; }
+		#bg { overflow: hidden; }
+	
+		#dr { display: block; color:black; margin-top: 50px; margin-bottom: 135px; }
+		#dr img { border-radius: 50%; height: 50px; margin-right: 10px; border-style: solid; border-color: white; border-width: 1px; }
+		#drName { vertical-align: top; line-height: 50px;}
+
+		#content { background-color: #f2f2f2; padding-bottom: 70px;}
+		#content p, h1, a { margin:0; text-align: center; }
+		#content ul { list-style-type: none; text-align: center;}
+
+		#footer { background-color: #2b2f3a; text-align: center;} 
+		#footer img { padding:20px;}
+		#footer .socialbuttons { margin:0 auto; margin-top:40px; padding-bottom:40px;}
+		#copyright { background: #414757; color: #a3a3a3;} 
+		#copyright p { padding-bottom:50px;}
+		#copyright h3 { font-size: 30px; font-weight: 700; line-height: 42px;letter-spacing: inherit;  }
+		#map_border { padding:10px; background:white; width:50%; margin:0 auto; position:relative; top:-40px; min-width:240px;}
+		#map_canvas { height:225px; }
+		.clear { clear:both; }
+		.socialbuttons { width:103px; height:18px; background-image: url("../images/social.PNG"); background-repeat: no-repeat;}
+		.socialbuttons a { display:inline-block; width:33px; height:18px; float:left;}
+		
+		@media only screen and (max-width: 769px)
+		{ 
+			video { zoom: 0.7; left: -30px; }
+			#logo img { margin: 10px; zoom: 0.4; }
+		}
+	</style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+		function initialize() {
+			var position = new google.maps.LatLng(41.330951, 19.828522);
+			var myOptions = {
+			  zoom: 17,
+			  center: position,
+			  mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(
+				document.getElementById("map_canvas"),
+				myOptions);
+		 
+			var marker = new google.maps.Marker({
+				position: position,
+				map: map,
+				title:"KETIDENT"
+			});  
+		 
+			var contentString = 'Klinika Dentare KETIDENT';
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		 
+			google.maps.event.addListener(marker, 'click', function() {
+			  infowindow.open(map,marker);
+			}); 
+		}
+
+	
+		$(document).ready(function() {
+			initialize();
+		
+			var vid = "s5M1-YQ4WrY";
+			var	streams=null;
+			var	video_focused = true;
+			var	video_tag = $("#video");
+			 video_obj = video_tag.get(0);
+			$.getJSON("https://query.yahooapis.com/v1/public/yql", {
+				q: "select * from csv where url='https://www.youtube.com/get_video_info?video_id=" + vid + "'",
+				format: "json"
+			}, function(data) {
+				if (data.query.results && !data.query.results.row.length) {
+					streams = parse_youtube_meta(data.query.results.row.col0);
+					video_tag.attr({
+						src: streams['360p']
+					});
+
+					video_obj.play();
+				} else {
+						$('pre').text('YQL request error...');
+				}
+			});
+
+			function parse_youtube_meta(rawdata) {
+				var data = parse_str(rawdata),
+					streams = (data.url_encoded_fmt_stream_map + ',' + data.adaptive_fmts).split(','),
+					result = {};
+				$.each(streams, function(n, s) {
+					var stream = parse_str(s),
+						itag = stream.itag * 1,
+						quality = false,
+						itag_map = {
+							18: '360p',
+							22: '720p',
+							37: '1080p',
+							38: '3072p',
+							82: '360p3d',
+							83: '480p3d',
+							84: '720p3d',
+							85: '1080p3d',
+							133: '240pna',
+							134: '360pna',
+							135: '480pna',
+							136: '720pna',
+							137: '1080pna',
+							160: '144pna',
+							264: '1440pna',
+							139: "48kbps",
+							140: "128kbps",
+							141: "256kbps"
+						};
+					if (itag_map[itag]) result[itag_map[itag]] = stream.url;
+				});
+				return result;
+			};
+
+			function parse_str(str) {
+				return str.split('&').reduce(function(params, param) {
+					var paramSplit = param.split('=').map(function(value) {
+						return decodeURIComponent(value.replace('+', ' '));
+					});
+					params[paramSplit[0]] = paramSplit[1];
+					return params;
+				}, {});
+			}
+		});
+	</script>
+  </head>
+  <body>
+  <div id="container">
+		<div id="bg">
+		  <video loop muted autoplay playsinline id="video"></video>
+		  <div id="contacts">
+			  <div id="header">
+				<div id="logo">
+					<a href="http://ketident.com/"><img src="../images/logo.png"/></a>
+				</div>
+			  </div>
+			</div>
+		</div>
+	  <div id="content">
+		<br/>
+		<h1>Klinika dentare me e mire ne Tirane</h1>
+		<p>
+		<br/>
+		<br/>
+			Ne kliniken tone do ti gjeni te gjitha sherbimet: mbushje, proteza, ura zirkon, ura porcelan, implante, drejtim dhembesh. NE CDO DITE, NE CDO ORE! 
+		</p>
+
+		<a id="dr" href="./dr-ketiona-agaj/"><img src="../images/dr.jpg"/><span id="drName">Dr. Ketiona Agaj</span></a>
+	  </div>
+	  <div id="footer">
+		<div id="copyright">
+            <div id="map">
+				<div id="map_border">
+					<div id="map_canvas"></div>
+				</div>
+			</div>
+			<h3><span style="color: white;">200m nga Pazari i Ri, Përballë Optika Roma</span> 0693919755</h3>
+			<p>Na kontaktoni ne: <strong>info@ketident.com</strong></p>
+			<p>Copyright © 2017</p>	
+		</div>
+		<div class="socialbuttons">
+			<a href="https://www.facebook.com/klinikadentareketident/"></a>
+			<a href="https://instagram.com/ketident"></a>
+			<a href="https://www.linkedin.com/company/klinika-dentare-ketident"></a>
+		</div>
+	  </div>
+  </div>
+  </body>
+</html>
