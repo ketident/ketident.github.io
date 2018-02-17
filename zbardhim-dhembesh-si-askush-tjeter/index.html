@@ -65,10 +65,40 @@
 			#logo img { margin: 10px; zoom: 0.4; }
 		}
 	</style>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+		function initialize() {
+			var position = new google.maps.LatLng(41.330951, 19.828522);
+			var myOptions = {
+			  zoom: 17,
+			  center: position,
+			  mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			var map = new google.maps.Map(
+				document.getElementById("map_canvas"),
+				myOptions);
+		 
+			var marker = new google.maps.Marker({
+				position: position,
+				map: map,
+				title:"KETIDENT"
+			});  
+		 
+			var contentString = 'Klinika Dentare KETIDENT';
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+		 
+			google.maps.event.addListener(marker, 'click', function() {
+			  infowindow.open(map,marker);
+			}); 
+		}
+
+	
 		$(document).ready(function() {
+			initialize();
+		
 			var vid = "B-RLSOdq8F0";
 			var	streams=null;
 			var	video_focused = true;
@@ -148,13 +178,16 @@
 			</div>
 		</div>
 	  <div id="content">
+		<br/>
 		<h1>Ju zbardhim dhembet tuaj si askush tjeter</h1>
-		<ul>
-			<li>Zbardhimi me efektiv ne treg</li>
-			<li>Metoda amerikane</li>
-			<li>Pa efekte anesore</li>
-			<li>Zgjat vetem 40 minuta</li>
-		</ul>
+		<p>
+		<br/>
+		<br/>
+			Zbardhimi me efektiv ne treg<br/>
+			Metoda amerikane<br/>
+			Pa efekte anesore<br/>
+			Zgjat vetem 40 minuta<br/>
+		</p>
 
 		<a id="dr" href="./dr-ketiona-agaj/"><img src="../images/dr.jpg"/><span id="drName">Dr. Ketiona Agaj</span></a>
 	  </div>
