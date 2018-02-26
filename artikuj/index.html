@@ -24,6 +24,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+	<link href="http://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 	<style>
 		@media (min-width:519px) {
 			#contentWrapper {  max-width:500px; }
@@ -56,7 +57,8 @@
 		#contentWrapper a img{ width: 100%; }		    
 		#contentWrapper a h3 { margin: 0;  }
 		#contentWrapper h1 { margin: 0; text-align: center; padding: 20px; text-transform: capitalize; }
-
+		#contentWrapper h3 { text-align: center; }
+		
 		#slogan h1 { font-size: 70px; font-weight: 700; line-height: 96px; letter-spacing: 2px; color:white; text-decoration: underline;}	
 		#slogan a { display:inline-block; background-color: #c01b1b; text-decoration:none; color:white; padding:10px; margin-bottom:300px; }
 
@@ -88,69 +90,12 @@
 		.slider-wrapper { height: 550px; overflow: hidden; }
 		.slide { float: left; position: absolute; width: 100%; max-width: 500px; opacity: 0; transition: opacity 1s linear; }
 		.slider-wrapper > .slide:first-child { opacity: 1; }
+		
+		#mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif; width:300px; margin: 0 auto; }
+		#mc_embed_signup input.email { width: auto;}
 	</style>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
 	<script type="text/javascript">
-	  	function Slideshow( element ) {
-			this.el = document.querySelector( element );
-			this.init();
-		}
-		
-		Slideshow.prototype = {
-			init: function() {
-				this.wrapper = this.el.querySelector( ".slider-wrapper" );
-				this.slides = this.el.querySelectorAll( ".slide" );
-				this.previous = this.el.querySelector( ".slider-previous" );
-				this.next = this.el.querySelector( ".slider-next" );
-				this.index = 0;
-				this.total = this.slides.length;
-				this.timer = null;
-				
-				this.action();
-				this.stopStart();	
-			},
-			_slideTo: function( slide ) {
-				var currentSlide = this.slides[slide];
-				currentSlide.style.opacity = 1;
-				
-				for( var i = 0; i < this.slides.length; i++ ) {
-					var slide = this.slides[i];
-					if( slide !== currentSlide ) {
-						slide.style.opacity = 0;
-					}
-				}
-			},
-			action: function() {
-				var self = this;
-				self.timer = setInterval(function() {
-					self.index++;
-					if( self.index == self.slides.length ) {
-						self.index = 0;
-					}
-					self._slideTo( self.index );
-					
-				}, 3000);
-			},
-			stopStart: function() {
-				var self = this;
-				self.el.addEventListener( "mouseover", function() {
-					clearInterval( self.timer );
-					self.timer = null;
-					
-				}, false);
-				self.el.addEventListener( "mouseout", function() {
-					self.action();
-					
-				}, false);
-			}
-			
-			
-		};
-		
-		document.addEventListener( "DOMContentLoaded", function() {		
-			var slider = new Slideshow( "#main-slider" );		
-		});
-	
     	function initialize() {
 		    var position = new google.maps.LatLng(41.330951, 19.828522);
 		    var myOptions = {
@@ -207,6 +152,20 @@
 	  <div id="content">
 	  	<div id="contentWrapper">
 	  		<h1>Artikuj</h1>
+			<h3>Ketu do te gjeni informacione interesante per shendetin tuaj oral.</h3>
+			
+			<div id="mc_embed_signup">
+				<form action="https://ketident.us17.list-manage.com/subscribe/post?u=dbfa291f23fdc826ff84339d6&amp;id=f5cfeca6b7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<div id="mc_embed_signup_scroll">
+					<label for="mce-EMAIL">Fusni email tuaj ketu per tu informuar mbi Oferta Speciale dhe Lajme mbi shendetin oral:</label>
+					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_dbfa291f23fdc826ff84339d6_f5cfeca6b7" tabindex="-1" value=""></div>
+					<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+					</div>
+				</form>
+			</div>
+			
 			<a href="./a-ka-efekte-anesore-zbardhimi-i-dhembeve/"><img style="height: 250px;" src="../images/artikuj/efektet-anesore-te-zbardhimit.jpg"/><h3>a ka efekte anesore zbardhimi i dhembeve</h3></a>
 			<a href="./goje-te-fresket-gjate-muajit-te-ramazanit/"><img style="height: 250px;" src="../images/artikuj/goje-te-fresket-gjate-muajit-te-ramazanit.jpg"/><h3>keshilla per goje te fresket gjate Ramazanit</h3></a>
 			<a href="./nga-vjen-era-e-keqe-e-gojes/"><img style="height: 250px;" src="../images/artikuj/nga-vjen-era-e-keqe-e-gojes.jpg"/><h3>nga vjen era e keqe e gojes?</h3></a>  
