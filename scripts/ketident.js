@@ -37,12 +37,14 @@ function initialize() {
       var x = document.getElementsByClassName("slide");
       if(x.length==0)
         x = document.getElementsByClassName("quote");
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";  
-      }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}    
-      x[myIndex-1].style.display = "block";  
-      setTimeout(carousel, 3000);    
+      if(!x.length==0) {
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 3000); 
+      }      
   }
 }
