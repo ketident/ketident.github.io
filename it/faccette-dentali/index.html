@@ -100,7 +100,7 @@
 
 	#quotes { height: 250px; overflow: hidden; }
 
-	video { width: 100%; min-height: 100%;  z-index: -1; position: relative;  }
+	#video { width: 100%; min-height: 100%;  z-index: -1; position: relative;  }
 	#contacts { position: absolute; top:0; left:0; }	
 	#contacts #logo img { margin: 20px; }
 
@@ -165,92 +165,41 @@ function initialize() {
       var x = document.getElementsByClassName("slide");
       if(x.length==0)
         x = document.getElementsByClassName("quote");
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";  
-      }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}    
-      x[myIndex-1].style.display = "block";  
-      setTimeout(carousel, 3000);    
+      if(!x.length==0) {
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 3000); 
+      }   
   }
+  
+    var onPlayerReady = function(event) {
+        event.target.playVideo();  
+  };
+
+  // The first argument of YT.Player is an HTML element ID. YouTube API will replace my <div id="player"> tag with an iframe containing the youtube video.
+  var player = new YT.Player('video', {
+      videoId : 'ZPwaJi1Q2_8',
+      events : {
+          'onReady' : onPlayerReady
+      }
+   });
 }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApZT6OXbO6rsyYI8MCQOY1VO1fCAxay2U&callback=initMap" type="text/javascript"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110808708-1"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function() {    
-      var vid = "ZPwaJi1Q2_8";
-      var streams=null;
-      var video_focused = true;
-      var video_tag = $("#video");
-       video_obj = video_tag.get(0);
-      $.getJSON("https://query.yahooapis.com/v1/public/yql", {
-        q: "select * from csv where url='https://www.youtube.com/get_video_info?video_id=" + vid + "'",
-        format: "json"
-      }, function(data) {
-        if (data.query.results && !data.query.results.row.length) {
-          streams = parse_youtube_meta(data.query.results.row.col0);
-          video_tag.attr({
-            src: streams['360p']
-          });
-
-          video_obj.play();
-        } else {
-            $('pre').text('YQL request error...');
-        }
-      });
-
-      function parse_youtube_meta(rawdata) {
-        var data = parse_str(rawdata),
-          streams = (data.url_encoded_fmt_stream_map + ',' + data.adaptive_fmts).split(','),
-          result = {};
-        $.each(streams, function(n, s) {
-          var stream = parse_str(s),
-            itag = stream.itag * 1,
-            quality = false,
-            itag_map = {
-              18: '360p',
-              22: '720p',
-              37: '1080p',
-              38: '3072p',
-              82: '360p3d',
-              83: '480p3d',
-              84: '720p3d',
-              85: '1080p3d',
-              133: '240pna',
-              134: '360pna',
-              135: '480pna',
-              136: '720pna',
-              137: '1080pna',
-              160: '144pna',
-              264: '1440pna',
-              139: "48kbps",
-              140: "128kbps",
-              141: "256kbps"
-            };
-          if (itag_map[itag]) result[itag_map[itag]] = stream.url;
-        });
-        return result;
-      };
-
-      function parse_str(str) {
-        return str.split('&').reduce(function(params, param) {
-          var paramSplit = param.split('=').map(function(value) {
-            return decodeURIComponent(value.replace('+', ' '));
-          });
-          params[paramSplit[0]] = paramSplit[1];
-          return params;
-        }, {});
-      }
-    });
-  </script>
+  
+  <script src="https://www.youtube.com/iframe_api"></script>
+  
   <style>#logo img{opacity:0;}</style>
 </head>
 <body onload="initialize()">
   <div id="container">
     <div>
-      <video loop muted autoplay playsinline id="video"></video>
+      <div id="video"></div>
       <div id="contacts">
         <div id="header">
           <div id="logo">
