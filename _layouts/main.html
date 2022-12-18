@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
+      </div>
+      <div class="author-name">{{site.author}}</div>
+      <p>{{site.about-author}}</p>
+
+      {% for page in site.pages %}
+        {% if page.categories contains 'toplevel' %}
+        <span>&#x2022;</span>
+        <a href="{{ page.url }}">
+              {{ page.short }}
+            </a>
+  
+        {% endif %}
+      {% endfor %}
+
+      <span>&#x2022;</span><a href="tel:{{site.social-phone}}"> Cel 00355693919755</a>
+
+    </div>
+
+
+
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Na Kontaktoni</h3>
+      <ul>
+        {% if site.social-instagram %}
+          <li><a href="https://instagram.com/{{ site.social-instagram }}" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>  
+        {% endif %}
+
+        {% if site.social-facebook %}
+          <li><a href="https://facebook.com/{{ site.social-facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        {% endif %}
+        
+        {% if site.social-whatsapp %}
+          <li><a href="https://api.whatsapp.com/send?phone={{site.social-whatsapp }}" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+        {% endif %}
+
+        {% if site.social-phone %}
+          <li><a href="tel:{{site.social-phone}}"><i class="fa fa-phone"></i></a></li>
+        {% endif %}
+
+        {% if site.social-email %}
+          <li class="email"><a href="mailto:{{site.social-email}}"><i class="fa fa-envelope-o"></i></a></li>
+        {% endif %}
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  {{ content }}
+</div>
