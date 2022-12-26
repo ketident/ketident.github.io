@@ -58,3 +58,7 @@ date: 2016-01-01
     </div>
 </blockquote>
 <script async src="//www.instagram.com/embed.js"/>
+
+👩‍🔬Vendosja e implantit me material Titanium grada e 5 mjekesore. Eshte aliazhi me i paster dhe me miqesor me organizmin sot per sot. Keto implante kane biokompatibilitet te larte, behen ‘nje’ me organzimin. Procedura e vendosjes se implanit zgjat me pak se nje ore.
+
+Rikuperimi shume i shpejte☺️
