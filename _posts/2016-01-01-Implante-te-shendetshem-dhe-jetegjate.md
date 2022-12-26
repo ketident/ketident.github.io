@@ -6,33 +6,33 @@ img: "artikuj/Implante-te-shendetshem-dhe-jetegjate.png"
 date: 2016-01-01
 ---
 <div dir="ltr">
-<span>&lt;blockquote class=&quot;instagram-media&quot; 
-data-instgrm-permalink=&quot;<a href="https://www.instagram.com/reel/CkdHvsujVqF/?utm_source=ig_embed&amp;amp;utm_campaign=loading">https://www.instagram.com/reel/CkdHvsujVqF/?utm_source=ig_embed&amp;amp;utm_campaign=loading</a>&quot;
- data-instgrm-version=&quot;14&quot; style=&quot; background:#FFF; border:0; 
+<span><blockquote class="instagram-media" 
+data-instgrm-permalink="<a href="https://www.instagram.com/reel/CkdHvsujVqF/?utm_source=ig_embed&amp;utm_campaign=loading">https://www.instagram.com/reel/CkdHvsujVqF/?utm_source=ig_embed&amp;utm_campaign=loading</a>"
+ data-instgrm-version="14" style=" background:#FFF; border:0; 
 border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 
 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; 
 padding:0; width:99.375%; width:-webkit-calc(100% - 2px); 
-width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:16px;&quot;&gt; &lt;a 
-href=&quot;<a href="https://www.instagram.com/reel/CkdHvsujVqF/?utm_source=ig_embed&amp;amp;utm_campaign=loading">https://www.instagram.com/reel/CkdHvsujVqF/?utm_source=ig_embed&amp;amp;utm_campaign=loading</a>&quot;
- style=&quot; background:#FFFFFF; line-height:0; padding:0 0; 
-text-align:center; text-decoration:none; width:100%;&quot; 
-target=&quot;_blank&quot;&gt; &lt;div style=&quot; display: flex; flex-direction: row; 
-align-items: center;&quot;&gt; &lt;div style=&quot;background-color: #F4F4F4; 
+width:calc(100% - 2px);"><div style="padding:16px;"> <a 
+href="<a href="https://www.instagram.com/reel/CkdHvsujVqF/?utm_source=ig_embed&amp;utm_campaign=loading">https://www.instagram.com/reel/CkdHvsujVqF/?utm_source=ig_embed&amp;utm_campaign=loading</a>"
+ style=" background:#FFFFFF; line-height:0; padding:0 0; 
+text-align:center; text-decoration:none; width:100%;" 
+target="_blank"> <div style=" display: flex; flex-direction: row; 
+align-items: center;"> <div style="background-color: #F4F4F4; 
 border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; 
-width: 40px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;display: flex; 
-flex-direction: column; flex-grow: 1; justify-content: center;&quot;&gt; 
-&lt;div style=&quot; background-color: #F4F4F4; border-radius: 4px; 
+width: 40px;"></div> <div style="display: flex; 
+flex-direction: column; flex-grow: 1; justify-content: center;"> 
+<div style=" background-color: #F4F4F4; border-radius: 4px; 
 flex-grow: 0; height: 14px; margin-bottom: 6px; width: 
-100px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot; background-color: #F4F4F4; 
+100px;"></div> <div style=" background-color: #F4F4F4; 
 border-radius: 4px; flex-grow: 0; height: 14px; width: 
-60px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;padding: 
-19% 0;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;display:block; height:50px; 
-margin:0 auto 12px; width:50px;&quot;&gt;&lt;svg width=&quot;50px&quot; height=&quot;50px&quot; 
-viewBox=&quot;0 0 60 60&quot; version=&quot;1.1&quot; xmlns=&quot;<a href="https://www.w3.org/2000/svg">https://www.w3.org/2000/svg</a>&quot; 
-xmlns:xlink=&quot;<a href="https://www.w3.org/1999/xlink">https://www.w3.org/1999/xlink</a>&quot;&gt;&lt;g stroke=&quot;none&quot; 
-stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;&lt;g 
-transform=&quot;translate(-511.000000, -20.000000)&quot; 
-fill=&quot;#000000&quot;&gt;&lt;g&gt;&lt;path d=&quot;M556.869,30.41 C554.814,30.41 
+60px;"></div></div></div><div style="padding: 
+19% 0;"></div> <div style="display:block; height:50px; 
+margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" 
+viewBox="0 0 60 60" version="1.1" xmlns="<a href="https://www.w3.org/2000/svg">https://www.w3.org/2000/svg</a>" 
+xmlns:xlink="<a href="https://www.w3.org/1999/xlink">https://www.w3.org/1999/xlink</a>"><g stroke="none" 
+stroke-width="1" fill="none" fill-rule="evenodd"><g 
+transform="translate(-511.000000, -20.000000)" 
+fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 
 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 
 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 
 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 
@@ -75,50 +75,50 @@ C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673
 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 
 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 
 571,50 C571,41.851 570.966,40.831 
-570.82,37.631&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/div&gt;&lt;div
- style=&quot;padding-top: 8px;&quot;&gt; &lt;div style=&quot; color:#3897f0; 
+570.82,37.631"></path></g></g></g></svg></div><div
+ style="padding-top: 8px;"> <div style=" color:#3897f0; 
 font-family:Arial,sans-serif; font-size:14px; font-style:normal; 
-font-weight:550; line-height:18px;&quot;&gt;View this post on 
-Instagram&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;padding: 12.5% 
-0;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;display: flex; flex-direction: row; 
-margin-bottom: 14px; align-items: center;&quot;&gt;&lt;div&gt; &lt;div 
-style=&quot;background-color: #F4F4F4; border-radius: 50%; height: 12.5px; 
+font-weight:550; line-height:18px;">View this post on 
+Instagram</div></div><div style="padding: 12.5% 
+0;"></div> <div style="display: flex; flex-direction: row; 
+margin-bottom: 14px; align-items: center;"><div> <div 
+style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; 
 width: 12.5px; transform: translateX(0px) 
-translateY(7px);&quot;&gt;&lt;/div&gt; &lt;div style=&quot;background-color: 
+translateY(7px);"></div> <div style="background-color: 
 #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) 
 translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; 
-margin-left: 2px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;background-color: 
+margin-left: 2px;"></div> <div style="background-color: 
 #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: 
-translateX(9px) translateY(-18px);&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div 
-style=&quot;margin-left: 8px;&quot;&gt; &lt;div style=&quot; background-color: #F4F4F4;
+translateX(9px) translateY(-18px);"></div></div><div 
+style="margin-left: 8px;"> <div style=" background-color: #F4F4F4;
  border-radius: 50%; flex-grow: 0; height: 20px; width: 
-20px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot; width: 0; height: 0; border-top: 
+20px;"></div> <div style=" width: 0; height: 0; border-top: 
 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 
 2px solid transparent; transform: translateX(16px) translateY(-4px) 
-rotate(30deg)&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;margin-left: 
-auto;&quot;&gt; &lt;div style=&quot; width: 0px; border-top: 8px solid #F4F4F4; 
+rotate(30deg)"></div></div><div style="margin-left: 
+auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; 
 border-right: 8px solid transparent; transform: 
-translateY(16px);&quot;&gt;&lt;/div&gt; &lt;div style=&quot; background-color: 
+translateY(16px);"></div> <div style=" background-color: 
 #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: 
-translateY(-4px);&quot;&gt;&lt;/div&gt; &lt;div style=&quot; width: 0; height: 0; 
+translateY(-4px);"></div> <div style=" width: 0; height: 0; 
 border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; 
 transform: translateY(-4px) 
-translateX(8px);&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt; &lt;div 
-style=&quot;display: flex; flex-direction: column; flex-grow: 1; 
-justify-content: center; margin-bottom: 24px;&quot;&gt; &lt;div style=&quot; 
+translateX(8px);"></div></div></div> <div 
+style="display: flex; flex-direction: column; flex-grow: 1; 
+justify-content: center; margin-bottom: 24px;"> <div style=" 
 background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 
-14px; margin-bottom: 6px; width: 224px;&quot;&gt;&lt;/div&gt; &lt;div style=&quot;
+14px; margin-bottom: 6px; width: 224px;"></div> <div style="
  background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 
-14px; width: 144px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;&lt;p style=&quot; 
+14px; width: 144px;"></div></div></a><p style=" 
 color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; 
 line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; 
 padding:8px 0 7px; text-align:center; text-overflow:ellipsis; 
-white-space:nowrap;&quot;&gt;&lt;a 
-href=&quot;<a href="https://www.instagram.com/reel/CkdHvsujVqF/?utm_source=ig_embed&amp;amp;utm_campaign=loading">https://www.instagram.com/reel/CkdHvsujVqF/?utm_source=ig_embed&amp;amp;utm_campaign=loading</a>&quot;
- style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; 
+white-space:nowrap;"><a 
+href="<a href="https://www.instagram.com/reel/CkdHvsujVqF/?utm_source=ig_embed&amp;utm_campaign=loading">https://www.instagram.com/reel/CkdHvsujVqF/?utm_source=ig_embed&amp;utm_campaign=loading</a>"
+ style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; 
 font-style:normal; font-weight:normal; line-height:17px; 
-text-decoration:none;&quot; target=&quot;_blank&quot;&gt;A post shared by Doctor.Keti 
-(@ketident)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;script async src=&quot;//<a href="http://www.instagram.com/embed.js">www.instagram.com/embed.js</a>&quot;&gt;&lt;/script&gt;</span>
+text-decoration:none;" target="_blank">A post shared by Doctor.Keti 
+(@ketident)</a></p></div></blockquote>
+<script async src="//<a href="http://www.instagram.com/embed.js">www.instagram.com/embed.js</a>"></script></span>
 
 </div>
