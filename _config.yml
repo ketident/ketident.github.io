@@ -3,7 +3,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Klinika dentare me e mire ne Tirane per kirurgjine dentare, trajtimin e mishrave te dhembeve, implateve dhe trajtimeve estetike.
 permalink: 'blog/:title/'
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ketident.com" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
