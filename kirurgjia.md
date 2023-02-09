@@ -6,7 +6,7 @@ permalink: /kirurgjia-dentare/
 categories: [toplevel]
 short: "Kirurgjia"
 ---
-<iframe width="330" height="598" src="https://www.youtube.com/embed/VtUeDf_FSEs" title="Kirurgji dentare" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe style="display:block; margin: 0 auto;" width="330" height="598" src="https://www.youtube.com/embed/VtUeDf_FSEs" title="Kirurgji dentare" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>
 Largimi i dhembit te qenit bashke me kistin ne nje pozicion jo te zakonshem🐶🦷 se bashku me tekniken per rigjenerimin kockor.
 <br/>
