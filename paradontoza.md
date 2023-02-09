@@ -6,7 +6,7 @@ permalink: /trajtim-paradontoze/
 categories: [toplevel]
 short: "Paradontoza"
 ---
-<iframe width="320" height="315" src="https://www.youtube.com/embed/9XBL-ktR6jg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe  style="display:block; margin: 0 auto;" width="320" height="315" src="https://www.youtube.com/embed/9XBL-ktR6jg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>
 👩🏻‍⚕️Paradontoza eshte semundje e aparatit ku mbeshteten dhembet. Per fate te keq ajo behet shkak per humbjen e dhembeve ne moshe shuuuume te re.
 <br/>
