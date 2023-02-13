@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.min.js"></script>
+	<script type="text/javascript">
+	(function(){
+		var width = 31;
+		var w = width;
+		var areaWidth = 400;
+		var firstInterval = 2000, secondInterval = 1000;
+		var points = [
+			[0,0],
+			[w,0],
+			[2*w,0],
+			[3*w,0],
+			[4*w,0],
+			[2*w,w],
+			[w,w*1.5],
+			[0,w*2],
+			[3*w,w*1.5],
+			[4*w,w*2],
+
+			[0,w*4],
+			[w,w*4],
+			[w*2,w*4],
+			[w*3,w*4],
+			[w*4,w*4],
+			[0,w*5],
+			[0,w*6],
+			[2*w,w*5],
+			[4*w,w*5],
+			[4*w,w*6],
+
+			[0,w*8],
+			[0,w*9],
+			[0,w*10],
+			[w,w*9],
+			[2*w,w*9],
+			[3*w,w*9],
+			[4*w,w*9],
+
+			[0,w*12],
+			[w,w*12],
+			[2*w,w*12],
+			[3*w,w*12],
+			[4*w,w*12],
+		];
+
+		var points2 = [
+			[w*6,0],[w*6,w],[w*6,w*2],
+			[w*7,0],
+			[w*8,0],[w*8.5,w*1.5],
+			[w*9,0],[w*9,w*2],
+			[w*10,0],[w*10,w],[w*10,w*2],
+
+			[w*6,w*4],[w*6,w*5],[w*6,w*6],
+			[w*7,w*4],
+			[w*8,w*4],[w*8,w*5],
+			[w*9,w*4],
+			[w*10,w*4],[w*10,w*5],[w*10,w*6],
+
+			[w*6,w*8],[w*6,w*10],
+			[w*7,w*8],[w*7.5,w*8.5],[w*7,w*10],
+			[w*8,w*8],[w*8,w*9.5],[w*8,w*10],
+			[w*9,w*8],[w*9,w*10],
+			[w*10,w*8],[w*10,w*10],
+
+			[w*6,w*12],[w*6,w*13],[w*6,w*14],
+			[w*7,w*13],
+			[w*8,w*13],
+			[w*9,w*13],
+			[w*10,w*13],
+
+			[w*6,w*16],
+			[w*7,w*16],
+			[w*8,w*16],
+			[w*9,w*16],
+			[w*10,w*16],
+		];
+
+
+		var random = function() {
+			return Math.floor((Math.random() * (areaWidth-width)) + 1);
+		};
+
+		function Square(containerObj,id,top,left,width,color)
+		{
+			//var background = random() % 2 === 1 ? "red" : "blue";
+			var background = color;
+			this.containerObj = containerObj;
+			this.id = "gtSquare" + id;
+			this.top = top;
+			this.left = left;
+			this.width = width;
+			this.squareObj = $('<div id="'+id+'" class="square" style="width:'+width+'px;height:'+width+'px;top:'+top+'px;left:'+left+'px;position:absolute;"><div style="width:90%;height:90%;background:'+background+';z-index:'+random()+';position:relative;"</div></div>');
+			
+			this.move = function(destTop, destLeft, finished){
+				var that = this;
+				var secondTimeout = function(direction){
+					setTimeout(function(){
+						if(direction==="top") {
+							that.squareObj.animate({ left: destLeft + "px", done: finished() });
+						} else {
+							that.squareObj.animate({ top: destTop + "px", done: finished() });
+						}
+					},secondInterval);
+				};
+				var firstTimeout = setTimeout(function(){
+					var firstMoveVertically = random() % 2 === 1;
+					if( firstMoveVertically===true ){
+						that.squareObj.animate({
+						 	top: destTop + "px",
+						 	done: secondTimeout("top")
+						});
+					} else {
+						that.squareObj.animate({ 
+							left: destLeft + "px",
+							done: secondTimeout("left")
+						});
+					}
+				},firstInterval);
+			};
+
+			this.containerObj.append(this.squareObj);
+		}
+
+		$(document).ready(function(){
+			var containerObj = $("#area");
+
+			var getHeart = function(block, leftOffset, topOffset){
+				var heart = [];
+
+				for(var i =0; i<block-3; i++) {
+					heart[heart.length] = [topOffset + width*(i+1), leftOffset];
+				}				
+				for(var i =0; i<block-1; i++) {
+					heart[heart.length] = [topOffset + width*(i), leftOffset+width];
+				}
+				for(var i =0; i<block; i++) {
+					heart[heart.length] = [topOffset + width*(i),leftOffset+width*2];
+					heart[heart.length] = [topOffset + width*(i+1),leftOffset+width*3];
+
+					heart[heart.length] = [topOffset + width*(i+2),leftOffset+width*4];
+
+					heart[heart.length] = [topOffset + width*(i+1),leftOffset+width*5];
+					heart[heart.length] = [topOffset + width*(i),leftOffset+width*6];					
+				}
+				for(var i =0; i<block-1; i++) {
+					heart[heart.length] = [topOffset + width*(i), leftOffset+width*7];
+				}			
+				for(var i =0; i<block-3; i++) {
+					heart[heart.length] = [topOffset + width*(i+1), leftOffset+width*8];
+				}
+				return heart;
+			};
+
+			var heart = getHeart(6,0,0);
+			var destinationHeart = getHeart(6,50,50);
+			var scrambledHeart = [];
+			var destinationHeartLength = destinationHeart.length;
+			for(var i=0; i<destinationHeartLength; i++) {
+				var index = random() % destinationHeart.length;
+				scrambledHeart[scrambledHeart.length] = destinationHeart[index];
+				destinationHeart.splice(index, 1);
+			}
+
+			var names = points.concat(points2);
+			var squares = [];
+			for(var i =0; i<names.length; i++) {
+				var color="red";
+				if(i>31)
+					color="blue";
+				squares[i] = new Square(containerObj,0,names[i][0],names[i][1],width,color);
+				(function(index){
+					squares[index].move(random(), random(), function(){
+						squares[index].move(scrambledHeart[index%scrambledHeart.length][0], scrambledHeart[index%scrambledHeart.length][1], function(){});
+					});
+				})(i);
+			}
+		});
+	})();
+	</script>
+</head>
+<body>
+<div id="area" style="position:relative;width:400px;height:400px;">
+</div>
+</body>
+</html>
