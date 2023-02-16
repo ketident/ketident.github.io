@@ -27,7 +27,7 @@ plugins:
   - jemoji
 
 
-paginate: 40
+paginate: 100
 paginate_path: "/page/:num"
 
 
