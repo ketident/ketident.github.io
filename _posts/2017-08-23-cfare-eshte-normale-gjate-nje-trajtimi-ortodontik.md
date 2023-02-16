@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Cfare eshte normale gjate nje trajtimi ortodontik"
 description: "Cfare problemesh jane normale per telat e dhembeve"
 image: "artikuj/cfare-eshte-normale-gjate-nje-trajtimi-ortodontik.jpg"

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "3 njerez te famshem me implante dentare"
 description: "Implante dentare për të zëvendësuar ato dhëmbë që ju thyen"
 image: "artikuj/3-njerez-te-famshem-me-implante-dentare.jpg"
