@@ -3,7 +3,7 @@ layout: post
 title: "Kurimi i mishrave te dhembeve me transplant"
 description: "Sherimi i mishrave te terhequr te dhembeve me transplant"
 img: "artikuj/kurimi-i-mishrave-te-dhembeve-me-transplant.jpg"
-date: 2023-04-14 21:55:55 +0200
+date: 2023-04-13 21:55:55 +0200
 ---
 <iframe style="display:block; margin: 0 auto;" width="320" height="315" src="https://www.youtube.com/embed/J82zo3vLB5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <p>
