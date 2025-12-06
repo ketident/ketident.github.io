@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Doctor.Keti — Link preview (replica)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f7f8;
+      --card:#ffffff;
+      --primary:#111827;
+      --muted:#6b7280;
+      --accent:#10b981;
+      --btn-shadow: 0 6px 18px rgba(16,24,40,0.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg, #f8fafc 0%, #f7f7f8 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+    .card{
+      width:100%;
+      max-width:560px;
+      background:var(--card);
+      border-radius:14px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+      padding:28px 22px 34px;
+      text-align:center;
+    }
+    .avatar{
+      width:112px;height:112px;
+      border-radius:50%;
+      margin:-80px auto 12px;
+      border:6px solid #fff;
+      box-shadow:0 6px 22px rgba(2,6,23,0.12);
+      background-size:cover;
+      background-position:center;
+    }
+    .handle{font-weight:700;font-size:20px;color:var(--primary);margin:6px 0 2px}
+    .subtitle{color:var(--muted);font-size:14px;margin-bottom:18px}
+
+    .links{display:flex;flex-direction:column;gap:12px;padding:10px 8px 0}
+    .link{
+      display:block;text-decoration:none;padding:14px 18px;border-radius:12px;background:#f3f4f6;box-shadow:var(--btn-shadow);
+      color:var(--primary);font-weight:600;font-size:16px;transition:transform .12s ease, box-shadow .12s ease;
+      border:1px solid rgba(2,6,23,0.03);
+    }
+    .link:active{transform:translateY(1px)}
+    .link:hover{box-shadow:0 12px 28px rgba(2,6,23,0.12);}
+
+    .small{font-size:13px;color:var(--muted);margin-top:18px}
+
+    .top-spacer{height:80px}
+
+    @media (max-width:420px){
+      .card{padding:20px}
+      .avatar{width:96px;height:96px;margin-top:-64px}
+    }
+  </style>
+</head>
+<body>
+  <div style="width:100%;max-width:800px;position:relative;">
+    <div class="card">
+      <div class="top-spacer"></div>
+      <div class="avatar" style="background-image:url('https://ketident.com/assets/img/dr.jpg')" aria-hidden="true"></div>
+      <div class="handle">@Doctor.Keti</div>
+      <div class="subtitle">Mjeke stomatologe</div>
+
+      <div class="links">
+        <a class="link" href="https://ketident.com" target="_blank" rel="noopener">Faqja web</a>
+		<a class="link" href="https://ketident.com/ebook/" target="_blank" rel="noopener">Guide per hapjen e kanaleve e drenazhimit</a>
+		<a class="link" href="https://ketident.com/ebook/superheronjte.html" target="_blank" rel="noopener">Superimune Kids</a>
+        <a class="link" href="https://app.squarespacescheduling.com/" target="_blank" rel="noopener">Rezervo nje konsulte virtuale</a>
+        <a class="link" href="https://app.squarespacescheduling.com/" target="_blank" rel="noopener">Rezervo konsulte ne klinike</a>
+        <a class="link" href="https://app.squarespacescheduling.com/" target="_blank" rel="noopener">Trajnime</a>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:12px;color:var(--muted);font-size:13px;">View on mobile</div>
+  </div>
+</body>
+</html>
